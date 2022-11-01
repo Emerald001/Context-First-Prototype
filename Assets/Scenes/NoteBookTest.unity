@@ -368,8 +368,9 @@ GameObject:
   - component: {fileID: 367091370}
   - component: {fileID: 367091372}
   - component: {fileID: 367091371}
+  - component: {fileID: 367091373}
   m_Layer: 5
-  m_Name: LeftPage
+  m_Name: Pages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,6 +434,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367091369}
   m_CullTransparentMesh: 1
+--- !u!114 &367091373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367091369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 1
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 600, y: 183.96}
+  m_Constraint: 2
+  m_ConstraintCount: 3
 --- !u!1 &878294354
 GameObject:
   m_ObjectHideFlags: 0
