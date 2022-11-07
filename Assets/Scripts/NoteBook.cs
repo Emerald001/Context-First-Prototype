@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NoteBook : MonoBehaviour
 {
-    //public GameObject prefab;
+    public GameObject prefab;
     public Transform NoteBookCollectibleParent;
     private bool toggleBool;
     public CollectiblePagesList testlist = new CollectiblePagesList();
@@ -31,8 +31,8 @@ public class NoteBook : MonoBehaviour
 
     public void AddCollectibleToNoteBook(ScriptableObject objectToAdd)
     {
-        //prefab.GetComponent<CollectibleDisplay>().collectible = (Collectible)objectToAdd;
-        //Instantiate(prefab, NoteBookCollectibleParent);
+        prefab.GetComponent<CollectibleDisplay>().collectible = (Collectible)objectToAdd;
+        Instantiate(prefab, NoteBookCollectibleParent);
         
         
     }

@@ -765,7 +765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51d44b28bd9e024abb8658c5b1452e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteBookCollectibleParent: {fileID: 1775110909}
+  prefab: {fileID: 6127063819511471894, guid: d48584e0deca78f469299b96634b69cf, type: 3}
+  NoteBookCollectibleParent: {fileID: 367091370}
   testlist:
     CollectiblesList: []
 --- !u!1 &1352552166
