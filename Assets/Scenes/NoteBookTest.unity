@@ -766,7 +766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NoteBookCollectibleParent: {fileID: 1775110909}
-  CollectiblesList: []
+  testlist:
+    CollectiblesList: []
 --- !u!1 &1352552166
 GameObject:
   m_ObjectHideFlags: 0

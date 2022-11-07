@@ -7,10 +7,11 @@ public class NoteBook : MonoBehaviour
     //public GameObject prefab;
     public Transform NoteBookCollectibleParent;
     private bool toggleBool;
+    public CollectiblePagesList testlist = new CollectiblePagesList();
+    
 
 
-
-    public List<ScriptableObject> CollectiblesList = new List<ScriptableObject>();
+    //public List<ScriptableObject> CollectiblesList = new List<ScriptableObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class NoteBook : MonoBehaviour
     {
         //prefab.GetComponent<CollectibleDisplay>().collectible = (Collectible)objectToAdd;
         //Instantiate(prefab, NoteBookCollectibleParent);
+        
         
     }
 
