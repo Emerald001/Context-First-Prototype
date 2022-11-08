@@ -14,36 +14,36 @@ public class TakeCollectible : MonoBehaviour, IInteractable
         //noteBook = GetComponent<NoteBook>();
         CollectiblesFound = 0;
         index2 = 0;
+        noteBook.NoteBookList.CollectiblesList.Add(new Page());
+        noteBook.NoteBookList.CollectiblesList[index2].PageList = new List<ScriptableObject>();
     }
     public void Interact()
     {
-        noteBook.testlist.CollectiblesList.Add(new Page());
         CollectiblesFound++;
         if(CollectiblesFound <= 6)
         {
-            //noteBook.CollectiblesList.Add(scriptableObject);
-            int index = noteBook.testlist.CollectiblesList.Count - 1;
-
-            noteBook.testlist.CollectiblesList[index].PageList = new List<ScriptableObject>();
-            noteBook.testlist.CollectiblesList[index2].PageList.Add(scriptableObject);
-
-            Debug.Log(noteBook.testlist.CollectiblesList[index].PageList.Count);
+            int index = noteBook.NoteBookList.CollectiblesList.Count - 1;
+            noteBook.NoteBookList.CollectiblesList[index].PageList.Add(scriptableObject);
             noteBook.AddCollectibleToNoteBook(scriptableObject);
-            Debug.Log("INTERACT");
 
-            if(CollectiblesFound == 6)
+            Debug.Log("INTERACT");
+            Debug.Log("Index 1 = " + index);
+            Debug.Log("Index 2 = " + index2);
+            
+            if(CollectiblesFound >= 6)
             {
                 ResetList();
             }
 
         }
+        
     }
 
     public void ResetList()
     {
         CollectiblesFound = 0;
-        noteBook.testlist.CollectiblesList.Add(new Page());
+        noteBook.NoteBookList.CollectiblesList.Add(new Page());
         index2++;
-
+        noteBook.NoteBookList.CollectiblesList[index2].PageList = new List<ScriptableObject>();
     }
 }
