@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Clue : ScriptableObject
 {
-    public new string clue;
-    public string description;
+    public new string ClueVraag;
+    public string ClueAntwoord;
 
     // Start is called before the first frame update
     void Start()

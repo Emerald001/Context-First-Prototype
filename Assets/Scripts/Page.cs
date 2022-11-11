@@ -14,3 +14,10 @@ public class CollectiblePagesList
 {
     public List<Page> CollectiblesList;
 }
+
+[System.Serializable]
+
+public class CluePagesList
+{
+    public List<Page> CluesList;
+}

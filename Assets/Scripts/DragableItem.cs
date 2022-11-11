@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     [HideInInspector] public Transform parentAfterDrag;
-    public Transform CanvasTransform;
+    public Canvas CanvasTransform;
 
     Vector3 offset;
     CanvasGroup canvasGroup;
@@ -38,7 +38,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         Debug.Log("Begind drag");
         parentAfterDrag = transform.parent;
-        transform.SetParent(CanvasTransform);
+        transform.SetParent(CanvasTransform.transform);
         transform.SetAsLastSibling();
     }
 
@@ -61,7 +61,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         canvasGroup.blocksRaycasts = false;
         Debug.Log("Begind drag");
         parentAfterDrag = transform.parent;
-        transform.SetParent(CanvasTransform);
+        transform.SetParent(CanvasTransform.transform);
         transform.SetAsLastSibling();
     }
 
