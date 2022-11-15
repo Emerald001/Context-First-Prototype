@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
+public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    [HideInInspector] public Transform parentAfterDrag;
+    public Transform parentAfterDrag;
     public Canvas CanvasTransform;
-
+    private WinningCondition winningCondition;
     Vector3 offset;
     CanvasGroup canvasGroup;
     public string destinationTag = "DropArea";
@@ -17,52 +17,43 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     float z;
     Vector3 pos;
     RectTransform rectTransform;
+
+    
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        x = Random.Range(1100, 1400);
-        y = Random.Range(-150, -900);
+        x = Random.Range(100, 200);
+        y = Random.Range(-150, -300);
         z = 2;
         pos = new Vector3(x, y, z);
-        rectTransform.position = pos;
+        rectTransform.localPosition = pos;
+        winningCondition = GetComponentInParent<WinningCondition>();
     }
     void Awake()
     {
         if (gameObject.GetComponent<CanvasGroup>() == null)
             gameObject.AddComponent<CanvasGroup>();
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
+        CanvasTransform = gameObject.GetComponentInParent(typeof(Canvas)) as Canvas;
+        parentAfterDrag = transform.parent;
 
     }
-    
+
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begind drag");
-        parentAfterDrag = transform.parent;
         transform.SetParent(CanvasTransform.transform);
         transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("DRAGGING");
         transform.position = Input.mousePosition;
     }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        Debug.Log("End Drag");
-        transform.SetParent(parentAfterDrag);
-    }
-
     public void OnPointerDown(PointerEventData eventData)
     {
         offset = transform.position - Input.mousePosition;
         canvasGroup.alpha = 0.5f;
-        canvasGroup.blocksRaycasts = false;
-        Debug.Log("Begind drag");
-        parentAfterDrag = transform.parent;
-        transform.SetParent(CanvasTransform.transform);
-        transform.SetAsLastSibling();
+        canvasGroup.blocksRaycasts = false;       
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -71,10 +62,24 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         if (raycastResult.gameObject?.tag == destinationTag)
         {
             transform.position = raycastResult.gameObject.transform.position;
+            transform.SetParent(raycastResult.gameObject.transform);
+            if(raycastResult.gameObject.transform == parentAfterDrag)
+            {
+                Debug.Log("SUCCES");
+                winningCondition.CorrectAnswers.Add(parentAfterDrag.gameObject);
+            }
+            else if(raycastResult.gameObject.transform != parentAfterDrag)
+            {
+                Debug.Log("NOT GOOD");
+                winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
+            }
+        }
+        else
+        {
+            winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
+            Debug.Log("NOT GOOD");
         }
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
-        Debug.Log("End Drag");
-        transform.SetParent(parentAfterDrag);
     }
 }

@@ -32,7 +32,6 @@ public class NoteBook : MonoBehaviour
         currentPage = 0;
         BookActive = false;
         prefabList = new List<GameObject>();
-
         NoteBookList.CollectiblesList.Add(new Page());
         NoteBookList.CollectiblesList[0].PageList = new List<ScriptableObject>();
 
@@ -41,8 +40,6 @@ public class NoteBook : MonoBehaviour
         {
             NoteBookClueList.Add(clue);
         }
-
-
         CollectiblesFound = 0;
         index2 = 0;
     }
@@ -70,7 +67,6 @@ public class NoteBook : MonoBehaviour
     //Clears everything from the page, and adds the items from the current page
     public void UpdatePages()
     {
-
         foreach (GameObject prefabItem in prefabList)
         {
             Destroy(prefabItem);
@@ -93,7 +89,6 @@ public class NoteBook : MonoBehaviour
         }
     }
 
-
     public void GoToCluePage()
     {
         NoteBookClueParent.gameObject.SetActive(true);
@@ -115,10 +110,6 @@ public class NoteBook : MonoBehaviour
             prefabList.Add(TempPrefab);
         }
     }
-
-   
-
-
 
     //Puts all Collectibles in lists of 6 and makes a new page at every 7th item
     public void ManageCollectibles(ScriptableObject scriptableObject)
@@ -145,15 +136,6 @@ public class NoteBook : MonoBehaviour
         NoteBookList.CollectiblesList[index2].PageList = new List<ScriptableObject>();
     }
 
-
-
-    public void ManageClues(ScriptableObject scriptableObject)
-    {
-     //   CluePrefab.GetComponent<ClueDisplay>().clue = (Clue)scriptableObject;
-        //TempPrefab = Instantiate(CluePrefab, NoteBookClueParent);
-    }
-
-
     //Page buttons
     public void PageRight()
     {
@@ -168,7 +150,6 @@ public class NoteBook : MonoBehaviour
             Debug.Log("CLUEEEE");
             GoToCluePage();
         }
-
     }
 
     public void PageLeft()
@@ -178,7 +159,6 @@ public class NoteBook : MonoBehaviour
             currentPage--;
             UpdatePages();
             NoteBookClueParent.gameObject.SetActive(false);
-
         }
     }
 }
