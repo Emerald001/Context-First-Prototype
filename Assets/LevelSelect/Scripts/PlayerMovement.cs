@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
    private  InputHandler _input;
 
   public float moveSpeed;
+    public Camera cam;
 
    private void Awake(){
        _input = GetComponent<InputHandler>();
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private void MoveTowardTarget(Vector3 targetVector)
     {
         var speed = moveSpeed * Time.deltaTime;
+
+        targetVector = Quaternion.Euler(0, cam.gameObject.transform.eulerAngles.y, 0) * targetVector;
         transform.Translate(targetVector * moveSpeed);
     }
 }
