@@ -7,10 +7,11 @@ public class TakeClue : MonoBehaviour, IInteractable
     public ScriptableObject scriptableObject;
     public NoteBook noteBook;
 
-
+    public bool ClueFound = false;
 
     public void Interact()
     {
-        //noteBook.ManageClues(scriptableObject);
+        noteBook.ToggleClueFound(scriptableObject);
+        ClueFound = true;
     }
 }

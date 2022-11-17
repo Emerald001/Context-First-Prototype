@@ -21,3 +21,9 @@ public class CluePagesList
 {
     public List<Page> CluesList;
 }
+
+[System.Serializable]
+public class CodexPageList
+{
+    public List<Page> CodexList;
+}

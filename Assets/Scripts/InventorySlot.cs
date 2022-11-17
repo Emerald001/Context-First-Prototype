@@ -9,8 +9,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public Clue ClueScriptableObject;
     public TMP_Text ClueVraag;
     public TMP_Text Antwoord;
-
-
+    public GameObject Clue;
     private void Start()
     {
         ClueVraag.text = ClueScriptableObject.ClueVraag;
