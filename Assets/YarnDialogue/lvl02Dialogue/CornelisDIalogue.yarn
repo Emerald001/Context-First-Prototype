@@ -1,0 +1,40 @@
+﻿title: CornelisDIalogue
+tags:
+---
+Cornelis: Heeft u de dader al weten op te sporen?
+-> Ja, ik weet wie het heeft gedaan!
+-> Nee, ik vroeg me af of je hem zelf misschien hebt laten ontsnappen?
+
+//ja
+Cornelis: Fantastisch! Wie heeft de ketter geholpen?
+
+-> Bakker Bart
+-> Frank de Bewaker
+-> Broeder Franciscus
+-> Maria
+-> Cornelis
+
+//ander antwoord behalve Maria of Cornelis
+Cornelis: Hmm, weet je het zeker? Ik wil niet de verkeerde persoon opsluiten voor een misdaad die ze niet hebben gepleegd...
+
+//Cornelis antwoord
+Cornelis: Wat? De geruchten waren dus fout, u bent zeker niet zo slim als men dacht...
+
+//Maria antwoord
+Cornelis: Wat?? 
+Cornelis: Mijn eigen vrouw... 
+Cornelis: Dit is niet mogelijk... 
+Cornelis: Oke, dit blijft tussen ons, niemand mag dit te weten komen!
+Cornelis: Ik geef u extra zilver dan beloofd, alstublieft.
+Cornelis: Bedankt, maareh... Moet u niet snel verder?
+Cornelis: *kuch kuch*
+
+//nee
+Cornelis: Ik haal jou hier om mij te helpen en je denkt dat ik hem zelf heb bevrijd?
+Cornelis: Misschien ben je een slechtere detective dan ik dacht.
+Cornelis: Ik heb ten slotte zelf het bevel gegeven om hem op te laten pakken en heb hem ter dood veroordeeld!
+Cornelis: Filips zorgt er met zijn harde aanpak wel voor dat iedereen hier boos wordt, zelf ik wordt nu verdacht!
+Cornelis: Ik kan hem ook gewoon laten weten dat ik die ketter heb laten verbranden...
+
+-> Oke, bedankt.
+===
