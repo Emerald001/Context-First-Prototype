@@ -12,26 +12,27 @@ public class NoteBook : MonoBehaviour
     public Transform NoteBookCodexParent;
     public Transform ToggleParent;
 
-    public int codexPages;
-    public int collectiblesPages;
+    [HideInInspector] public int codexPages;
+    [HideInInspector] public int collectiblesPages;
 
-    public int codexPageNumber;
-    public int collectiblePageNumber;
-    public bool clueActive = false;
+    [HideInInspector] public int codexPageNumber;
+    [HideInInspector] public int collectiblePageNumber;
+    [HideInInspector] public bool clueActive = false;
     [HideInInspector] public bool BookActive;
 
-    public CollectiblePagesList NoteBookCollectiblesList = new CollectiblePagesList();
+    [HideInInspector] public CollectiblePagesList NoteBookCollectiblesList = new CollectiblePagesList();
     public List<TakeClue> NoteBookClueList = new List<TakeClue>();
     public CodexPageList NoteBookCodexList = new CodexPageList();
-    
+
     public List<Page> CurrentPageList = new List<Page>();
     public List<GameObject> prefabList = new List<GameObject>();
 
-    public int currentPage;
+    [HideInInspector] public int currentPage;
     private GameObject TempPrefab;
-    public int CollectiblesFound;
+    [HideInInspector] public int CollectiblesFound;
     private int index2;
-
+    public GameObject[] dragableObjects;
+    public List<GameObject> dragableObjectStorage = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +50,7 @@ public class NoteBook : MonoBehaviour
         {
             NoteBookClueList.Add(clue);
         }
+
         CollectiblesFound = 0;
         index2 = 0;
     }
@@ -87,6 +89,12 @@ public class NoteBook : MonoBehaviour
             prefabList.RemoveAll(GameObject => GameObject == null);
             prefabList.Clear();
             CurrentPageList.Clear();
+
+
+        foreach (GameObject item in dragableObjects)
+        {
+            dragableObjectStorage.Add(item);
+        }
     }
     public void GoToCollectibles()
     {
@@ -131,6 +139,9 @@ public class NoteBook : MonoBehaviour
                 CluePrefab.GetComponent<InventorySlot>().Clue.SetActive(true);
             }
         }
+
+        dragableObjects = GameObject.FindGameObjectsWithTag("DragableObject");
+        
     }
 
     public void GoToCodex()
@@ -183,6 +194,7 @@ public class NoteBook : MonoBehaviour
         NoteBookCollectiblesList.CollectiblesList.Add(new Page());
         index2++;
         NoteBookCollectiblesList.CollectiblesList[index2].PageList = new List<ScriptableObject>();
+       
     }
 
     //Page buttons

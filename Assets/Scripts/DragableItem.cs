@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     public Transform parentAfterDrag;
+    public Transform backupParent;
     public Canvas CanvasTransform;
     private WinningCondition winningCondition;
     Vector3 offset;
@@ -17,17 +18,32 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
     float z;
     Vector3 pos;
     RectTransform rectTransform;
+    public bool posSet = false;
+    //public Vector3 newPos;
 
-    
+
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+        winningCondition = GetComponentInParent<WinningCondition>();
+        //rectTransform.localPosition = newPos;
+
+        if (posSet == false)
+        {
+            SetRandomPos();
+        }
+
+    }
+
+    public void SetRandomPos()
+    {
+        Debug.Log("Hyva");
         x = Random.Range(100, 200);
         y = Random.Range(-150, -300);
         z = 2;
         pos = new Vector3(x, y, z);
         rectTransform.localPosition = pos;
-        winningCondition = GetComponentInParent<WinningCondition>();
+        posSet = true;
     }
     void Awake()
     {
@@ -58,6 +74,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        //gameObject.transform.position = newPos;
         RaycastResult raycastResult = eventData.pointerCurrentRaycast;
         if (raycastResult.gameObject?.tag == destinationTag)
         {
@@ -76,10 +93,17 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
         }
         else
         {
-            winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
-            Debug.Log("NOT GOOD");
+            transform.SetParent(raycastResult.gameObject.transform);
+
+            test();
         }
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
+    }
+
+    public void test()
+    {
+        winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
+        Debug.Log("NOT GOOD");
     }
 }
