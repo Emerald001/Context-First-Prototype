@@ -25,9 +25,12 @@ public class CameraLookaround : MonoBehaviour
     }
 
     void Update() {
-        transform.position = Vector3.Lerp(transform.position, ObjectToFollow.transform.position, followSpeed * Time.deltaTime);
-
-        CheckBackwards();
+        if (followSpeed > 0) {
+            transform.position = Vector3.Lerp(transform.position, ObjectToFollow.transform.position, followSpeed * Time.deltaTime);
+            CheckBackwards();
+        }
+        else
+            transform.position = ObjectToFollow.transform.position;
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
