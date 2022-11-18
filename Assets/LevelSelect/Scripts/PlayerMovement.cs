@@ -4,27 +4,38 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-   private  InputHandler _input;
+    public float MoveSpeed = 5;
+    public float RotationSpeed = 0.1f;
+    private InputHandler Input;
 
-  public float moveSpeed;
-    public Camera cam;
-
-   private void Awake(){
-       _input = GetComponent<InputHandler>();
-   }
+    private void Awake()
+    {
+        Input = GetComponent<InputHandler>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
-        MoveTowardTarget(targetVector);
+        var targetVector = new Vector3(Input.InputVector.x, 0, Input.InputVector.y);
+
+        var movementVector = MoveTowardTarget(targetVector);
+        RotateTowardMovementVector(movementVector);
+
     }
 
-    private void MoveTowardTarget(Vector3 targetVector)
+    private void RotateTowardMovementVector(Vector3 movementVector)
     {
-        var speed = moveSpeed * Time.deltaTime;
+        if (movementVector.magnitude == 0)
+            return;
+        var rotation = Quaternion.LookRotation(movementVector);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, RotationSpeed);
+    }
 
-        targetVector = Quaternion.Euler(0, cam.gameObject.transform.eulerAngles.y, 0) * targetVector;
-        transform.Translate(targetVector * moveSpeed);
+    private Vector3 MoveTowardTarget(Vector3 targetVector)
+    {
+            var speed = MoveSpeed  * Time.deltaTime;
+            var targetPosition = transform.position + targetVector * speed;
+            transform.position = targetPosition;
+        return targetVector;
     }
 }
