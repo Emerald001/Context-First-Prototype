@@ -26,13 +26,14 @@ public class NoteBook : MonoBehaviour
 
     public List<Page> CurrentPageList = new List<Page>();
     public List<GameObject> prefabList = new List<GameObject>();
+    public List<GameObject> ClueListPrefab = new List<GameObject>();
 
     [HideInInspector] public int currentPage;
     private GameObject TempPrefab;
     [HideInInspector] public int CollectiblesFound;
     private int index2;
-    public GameObject[] dragableObjects;
-    public List<GameObject> dragableObjectStorage = new List<GameObject>();
+    private bool CluesMade = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,12 +90,6 @@ public class NoteBook : MonoBehaviour
             prefabList.RemoveAll(GameObject => GameObject == null);
             prefabList.Clear();
             CurrentPageList.Clear();
-
-
-        foreach (GameObject item in dragableObjects)
-        {
-            dragableObjectStorage.Add(item);
-        }
     }
     public void GoToCollectibles()
     {
@@ -125,23 +120,22 @@ public class NoteBook : MonoBehaviour
         NoteBookCollectibleParent.gameObject.SetActive(false);
         NoteBookClueParent.gameObject.SetActive(true);
         NoteBookCodexParent.gameObject.SetActive(false);
-
-        foreach (TakeClue clue in NoteBookClueList)
+        if(ClueListPrefab.Count != NoteBookClueList.Count)
         {
-            Clue ClueToAdd = (Clue)clue.scriptableObject;
-            CluePrefab.GetComponent<InventorySlot>().ClueScriptableObject = ClueToAdd;
-            CluePrefab.GetComponent<InventorySlot>().Clue.SetActive(true);
-            TempPrefab = Instantiate(CluePrefab, NoteBookClueParent);
-            prefabList.Add(TempPrefab);
-
-            if (clue.ClueFound == true)
+            foreach (TakeClue clue in NoteBookClueList)
             {
+                Clue ClueToAdd = (Clue)clue.scriptableObject;
+                CluePrefab.GetComponent<InventorySlot>().ClueScriptableObject = ClueToAdd;
                 CluePrefab.GetComponent<InventorySlot>().Clue.SetActive(true);
+                TempPrefab = Instantiate(CluePrefab, NoteBookClueParent);
+                ClueListPrefab.Add(TempPrefab);
+
+                if (clue.ClueFound == true)
+                {
+                    CluePrefab.GetComponent<InventorySlot>().Clue.SetActive(true);
+                }
             }
         }
-
-        dragableObjects = GameObject.FindGameObjectsWithTag("DragableObject");
-        
     }
 
     public void GoToCodex()
