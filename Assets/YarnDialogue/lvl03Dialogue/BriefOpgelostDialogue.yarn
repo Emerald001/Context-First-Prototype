@@ -3,9 +3,12 @@ tags:
 ---
 Anna: Heeft u de codetaal al weten te ontcijferen?
 -> Ja
+<<jump Ontcijferd>>
+
 -> Nee, nog niet.
 
-//ja
+---
+title: Ontcijferd
 Anna: Oh, wat snel!
 Anna: Alle geruchten zijn waar, u bent een expert!
 Anna: Wat? 

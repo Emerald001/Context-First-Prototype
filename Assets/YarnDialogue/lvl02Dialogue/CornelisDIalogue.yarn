@@ -3,7 +3,9 @@ tags:
 ---
 Cornelis: Heeft u de dader al weten op te sporen?
 -> Ja, ik weet wie het heeft gedaan!
+
 -> Nee, ik vroeg me af of je hem zelf misschien hebt laten ontsnappen?
+<<jump NotYetClue>>
 
 //ja
 Cornelis: Fantastisch! Wie heeft de ketter geholpen?
@@ -11,16 +13,24 @@ Cornelis: Fantastisch! Wie heeft de ketter geholpen?
 -> Bakker Bart
 -> Frank de Bewaker
 -> Broeder Franciscus
--> Maria
--> Cornelis
+<<jump AnderAntwoord>>
 
-//ander antwoord behalve Maria of Cornelis
+-> Maria
+<<jump GoedAntwoord>>
+
+-> Cornelis
+<<jump CornelisAntwoord>>
+
+---
+title: AnderAntwoord
 Cornelis: Hmm, weet je het zeker? Ik wil niet de verkeerde persoon opsluiten voor een misdaad die ze niet hebben gepleegd...
 
-//Cornelis antwoord
+---
+title: CornelisAntwoord
 Cornelis: Wat? De geruchten waren dus fout, u bent zeker niet zo slim als men dacht...
 
-//Maria antwoord
+
+title: GoedAntwoord
 Cornelis: Wat?? 
 Cornelis: Mijn eigen vrouw... 
 Cornelis: Dit is niet mogelijk... 
@@ -29,7 +39,9 @@ Cornelis: Ik geef u extra zilver dan beloofd, alstublieft.
 Cornelis: Bedankt, maareh... Moet u niet snel verder?
 Cornelis: *kuch kuch*
 
-//nee
+---
+
+title: NotYetClue
 Cornelis: Ik haal jou hier om mij te helpen en je denkt dat ik hem zelf heb bevrijd?
 Cornelis: Misschien ben je een slechtere detective dan ik dacht.
 Cornelis: Ik heb ten slotte zelf het bevel gegeven om hem op te laten pakken en heb hem ter dood veroordeeld!
