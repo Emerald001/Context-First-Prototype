@@ -8,10 +8,16 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: nl-NL
+  stringIDs:
+  - StartDialogue-StartDialogue-0
+  - StartDialogue-StartDialogue-1
+  - StartDialogue-StartDialogue-2
+  - StartDialogue-StartDialogue-3
+  - StartDialogue-StartDialogue-4
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: d63f0f054e4bdff4ebb8090d99e3a4c8,
+    type: 3}
   localizations: []

@@ -8,10 +8,14 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: nl-NL
+  stringIDs:
+  - KatharinaClue-KatharinaClue-0
+  - KatharinaClue-KatharinaClue-1
+  - KatharinaClue-KatharinaClue-2
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 9bcc9e14d1c6edd4baca056cb222a0f0,
+    type: 3}
   localizations: []

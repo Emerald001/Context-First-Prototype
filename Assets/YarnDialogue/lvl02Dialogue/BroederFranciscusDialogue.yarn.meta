@@ -8,10 +8,15 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: nl-NL
+  stringIDs:
+  - BroederFranciscusDialogue-BroederFranciscusDialogue-0
+  - BroederFranciscusDialogue-BroederFranciscusDialogue-1
+  - BroederFranciscusDialogue-BroederFranciscusDialogue-2
+  - BroederFranciscusDialogue-BroederFranciscusDialogue-3
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 2290a83d10e8be3409300f063eb5e9d6,
+    type: 3}
   localizations: []

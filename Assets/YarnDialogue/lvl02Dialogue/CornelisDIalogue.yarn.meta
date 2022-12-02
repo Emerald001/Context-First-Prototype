@@ -8,10 +8,42 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: nl-NL
+  stringIDs:
+  - CornelisDIalogue-CornelisDIalogue-0
+  - CornelisDIalogue-CornelisDIalogue-1
+  - CornelisDIalogue-CornelisDIalogue-2
+  - CornelisDIalogue-CornelisDIalogue-3
+  - CornelisDIalogue-CornelisDIalogue-4
+  - CornelisDIalogue-CornelisDIalogue-5
+  - CornelisDIalogue-CornelisDIalogue-6
+  - CornelisDIalogue-CornelisDIalogue-7
+  - CornelisDIalogue-CornelisDIalogue-8
+  - CornelisDIalogue-CornelisDIalogue-9
+  - CornelisDIalogue-CornelisDIalogue-10
+  - CornelisDIalogue-CornelisDIalogue-11
+  - CornelisDIalogue-CornelisDIalogue-12
+  - CornelisDIalogue-CornelisDIalogue-13
+  - CornelisDIalogue-CornelisDIalogue-14
+  - CornelisDIalogue-CornelisDIalogue-15
+  - CornelisDIalogue-CornelisDIalogue-16
+  - CornelisDIalogue-CornelisDIalogue-17
+  - CornelisDIalogue-CornelisDIalogue-18
+  - CornelisDIalogue-CornelisDIalogue-19
+  - CornelisDIalogue-CornelisDIalogue-20
+  - CornelisDIalogue-CornelisDIalogue-21
+  - CornelisDIalogue-CornelisDIalogue-22
+  - CornelisDIalogue-CornelisDIalogue-23
+  - CornelisDIalogue-CornelisDIalogue-24
+  - CornelisDIalogue-CornelisDIalogue-25
+  - CornelisDIalogue-CornelisDIalogue-26
+  - CornelisDIalogue-CornelisDIalogue-27
+  - CornelisDIalogue-CornelisDIalogue-28
+  - CornelisDIalogue-CornelisDIalogue-29
+  - CornelisDIalogue-CornelisDIalogue-30
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 7e8fac115b24b1946b32391ba363e2c1,
+    type: 3}
   localizations: []

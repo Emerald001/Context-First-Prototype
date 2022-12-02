@@ -8,10 +8,27 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: nl-NL
+  stringIDs:
+  - AnnaBriefStukkenGevonden-NewYarnScript-0
+  - AnnaBriefStukkenGevonden-NewYarnScript-1
+  - AnnaBriefStukkenGevonden-NewYarnScript-2
+  - AnnaBriefStukkenGevonden-NewYarnScript-3
+  - AnnaBriefStukkenGevonden-NewYarnScript-4
+  - AnnaBriefStukkenGevonden-NewYarnScript-5
+  - AnnaBriefStukkenGevonden-NewYarnScript-6
+  - AnnaBriefStukkenGevonden-NewYarnScript-7
+  - AnnaBriefStukkenGevonden-NewYarnScript-8
+  - AnnaBriefStukkenGevonden-NewYarnScript-9
+  - AnnaBriefStukkenGevonden-NewYarnScript-10
+  - AnnaBriefStukkenGevonden-NewYarnScript-11
+  - AnnaBriefStukkenGevonden-NewYarnScript-12
+  - AnnaBriefStukkenGevonden-NewYarnScript-13
+  - AnnaBriefStukkenGevonden-NewYarnScript-14
+  - AnnaBriefStukkenGevonden-NewYarnScript-15
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: ce21be20dd7357a4985e543dc22568ab,
+    type: 3}
   localizations: []

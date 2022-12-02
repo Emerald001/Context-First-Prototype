@@ -8,10 +8,20 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: nl-NL
+  stringIDs:
+  - StartDialogueLvl03-StartDialogueLvl03-0
+  - StartDialogueLvl03-StartDialogueLvl03-1
+  - StartDialogueLvl03-StartDialogueLvl03-2
+  - StartDialogueLvl03-StartDialogueLvl03-3
+  - StartDialogueLvl03-StartDialogueLvl03-4
+  - StartDialogueLvl03-StartDialogueLvl03-5
+  - StartDialogueLvl03-StartDialogueLvl03-6
+  - StartDialogueLvl03-StartDialogueLvl03-7
+  - StartDialogueLvl03-StartDialogueLvl03-8
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: dd91904ed563c6341b1041fc013d2859,
+    type: 3}
   localizations: []

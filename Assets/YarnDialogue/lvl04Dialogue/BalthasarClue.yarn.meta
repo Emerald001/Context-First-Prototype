@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 08057be18482e7444ada19cf254c3396
+guid: 3ece2d02b9c0e854f93429d8d31eae58
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,13 +8,10 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: nl-NL
-  stringIDs:
-  - Omstander1Clue-Omstander1Clue-0
-  - Omstander1Clue-Omstander1Clue-1
-  compilationStatus: 1
+  baseLanguageID: en-US
+  stringIDs: []
+  compilationStatus: 0
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: 08057be18482e7444ada19cf254c3396,
-    type: 3}
+  baseLanguage: {instanceID: 0}
   localizations: []

@@ -8,10 +8,22 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: nl-NL
+  stringIDs:
+  - BewakerFrankDialogue-BewakerFrankDialogue-0
+  - BewakerFrankDialogue-BewakerFrankDialogue-1
+  - BewakerFrankDialogue-BewakerFrankDialogue-2
+  - BewakerFrankDialogue-BewakerFrankDialogue-3
+  - BewakerFrankDialogue-BewakerFrankDialogue-4
+  - BewakerFrankDialogue-BewakerFrankDialogue-5
+  - BewakerFrankDialogue-BewakerFrankDialogue-6
+  - BewakerFrankDialogue-BewakerFrankDialogue-7
+  - BewakerFrankDialogue-BewakerFrankDialogue-8
+  - BewakerFrankDialogue-BewakerFrankDialogue-9
+  - BewakerFrankDialogue-BewakerFrankDialogue-10
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: f3e5faac22a952b4391a8c07b188c21b,
+    type: 3}
   localizations: []
