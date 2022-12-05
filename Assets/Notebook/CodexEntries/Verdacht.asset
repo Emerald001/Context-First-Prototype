@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa68e5f11f55864fba64f9e95c979b1, type: 3}
   m_Name: Verdacht
   m_EditorClassIdentifier: 
-  word: verdacht
+  word: Verdacht
   description: niet betrouwbaar
