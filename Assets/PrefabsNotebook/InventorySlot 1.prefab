@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254279d29cbe24f42b73f8c706d374fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClueScriptableObject: {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c,
+  ClueScriptableObject: {fileID: 11400000, guid: a03ad9b102c243f4db6ea9d73e253379,
     type: 2}
   ClueVraag: {fileID: 1224222390337706654}
   Antwoord: {fileID: 1224222390855183744}
