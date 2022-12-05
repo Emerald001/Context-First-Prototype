@@ -10113,7 +10113,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191580890}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.68, y: 9.18, z: 0.2}
@@ -10161,7 +10161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -10492,7 +10492,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209880345}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.521617, y: 9.290001, z: 0.2}
@@ -10540,7 +10540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -38707,7 +38707,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778153375}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.5700154, y: 8.889999, z: 0.2}
@@ -38762,7 +38762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -44965,6 +44965,7 @@ GameObject:
   - component: {fileID: 991568493}
   - component: {fileID: 991568495}
   - component: {fileID: 991568494}
+  - component: {fileID: 991568496}
   m_Layer: 0
   m_Name: klok
   m_TagString: Untagged
@@ -45052,6 +45053,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &991568496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991568492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.490003, y: 15.2, z: 0.2000001}
+  m_Center: {x: -0.000005722046, y: 0, z: -0.000030517578}
 --- !u!1001 &1016200493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45875,7 +45889,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042335625}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.521617, y: 9.290001, z: 0.2}
@@ -45893,7 +45907,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042335625}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
@@ -45923,7 +45937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -46691,7 +46705,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069666758}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.68, y: 9.18, z: 0.2}
@@ -46708,7 +46722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -54836,7 +54850,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196698778}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5.0699997, y: 9.602367, z: 0.2}
@@ -54853,7 +54867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -82407,6 +82421,7 @@ GameObject:
   - component: {fileID: 1797651796}
   - component: {fileID: 1797651795}
   - component: {fileID: 1797651797}
+  - component: {fileID: 1797651798}
   m_Layer: 0
   m_Name: vogelvrijBrief
   m_TagString: Untagged
@@ -82502,7 +82517,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797651791}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 20, y: 16, z: 0.20000096}
@@ -82519,7 +82534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -82594,6 +82609,31 @@ MonoBehaviour:
   scriptableObject: {fileID: 11400000, guid: ed204c100b381c64389628cbd30dc0f5, type: 2}
   noteBook: {fileID: 773829043}
   ClueFound: 0
+--- !u!114 &1797651798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797651791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1798050598
 GameObject:
   m_ObjectHideFlags: 0
@@ -97790,7 +97830,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018543717}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.68, y: 9.18, z: 0.2}
@@ -97807,7 +97847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -100113,7 +100153,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095273469}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5.0699997, y: 9.602367, z: 0.2}
@@ -100161,7 +100201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
