@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void OpenMissionPromptCanvas(GameObject canvas)
+    bool BookActive;
+    private void Update()
     {
-        Time.timeScale = 1;
-        canvas.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.Escape) && BookActive == false)
+        {
+          //  ToggleParent.gameObject.SetActive(true);
+            BookActive = true;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Escape) && BookActive == true)
+        {
+           // ToggleParent.gameObject.SetActive(false);
+            //UpdatePages();
+            BookActive = false;
+        }
     }
-    public void BackToMain(GameObject brief)
-    {
-        Time.timeScale = 1;
-        brief.SetActive(false);
-    }
+
 
 }
