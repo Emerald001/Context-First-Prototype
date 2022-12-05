@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    bool BookActive;
-    private void Update()
+    bool BriefActive;
+    public GameObject brief;
+    public void OpenBrief() 
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && BookActive == false)
+        if (BriefActive == false)
         {
-          //  ToggleParent.gameObject.SetActive(true);
-            BookActive = true;
+            brief.SetActive(true);
+            BriefActive = true;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Escape) && BookActive == true)
+        else if (BriefActive == true)
         {
-           // ToggleParent.gameObject.SetActive(false);
-            //UpdatePages();
-            BookActive = false;
+            brief.SetActive(false);
+            BriefActive = false;
         }
     }
 
