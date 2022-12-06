@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Level2_KetterBevrijd.unity
+    guid: 204cea0dcda70ae45804b9c74909e310
+  - enabled: 1
+    path: Assets/LevelSelect/Scene/LevelSelectMap.unity
+    guid: 2b5a27332b99cbf4589c18a10911b660
+  - enabled: 1
+    path: Assets/Scenes/Level4_Willem.unity
+    guid: aa3bc4285f82e1843b35a4be9e19472d
   m_configObjects: {}
