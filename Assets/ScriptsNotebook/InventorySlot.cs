@@ -9,11 +9,19 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public Clue ClueScriptableObject;
     public TMP_Text ClueVraag;
     public TMP_Text Antwoord;
-    public GameObject Clue;
+    public Image taart;
+
     private void Start()
     {
         ClueVraag.text = ClueScriptableObject.ClueVraag;
         Antwoord.text = ClueScriptableObject.ClueAntwoord;
+        taart.gameObject.SetActive(false);
+    }
+
+    public void ToggleActive()
+    {
+        Debug.Log("Doe ik het?" + taart.gameObject.name);
+        taart.gameObject.SetActive(false);
     }
 
 

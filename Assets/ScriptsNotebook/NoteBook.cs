@@ -28,15 +28,17 @@ public class NoteBook : MonoBehaviour
     public List<GameObject> prefabList = new List<GameObject>();
     public List<GameObject> ClueListPrefab = new List<GameObject>();
 
-    [HideInInspector] public int currentPage;
+    public int currentPage;
     private GameObject TempPrefab;
     [HideInInspector] public int CollectiblesFound;
     private int index2;
     private bool CluesMade = false;
+    private ClueHelperScript clueHelper;
 
     // Start is called before the first frame update
     void Start()
     {
+        clueHelper = GetComponent<ClueHelperScript>();
         NoteBookClueParent.gameObject.SetActive(false);
         NoteBookCodexParent.gameObject.SetActive(false);
         ToggleParent.gameObject.SetActive(false);
@@ -79,7 +81,6 @@ public class NoteBook : MonoBehaviour
         }
     }
 
-
     //Clears everything from the page, and adds the items from the current page
     public void ResetPage()
     {
@@ -98,44 +99,39 @@ public class NoteBook : MonoBehaviour
             NoteBookCodexParent.gameObject.SetActive(false);
 
 
-
+            if(CollectiblesFound > 0)
+        {
             CurrentPageList.Add(NoteBookCollectiblesList.CollectiblesList[currentPage]);
-
             foreach (Collectible item in CurrentPageList[0].PageList)
             {
                 Collectibleprefab.GetComponent<CollectibleDisplay>().collectible = (Collectible)item;
                 TempPrefab = Instantiate(Collectibleprefab, NoteBookCollectibleParent);
                 prefabList.Add(TempPrefab);
             }
+
+        }
+
         
     }
-    public void ToggleClueFound(ScriptableObject clueding)
-    {
-        //clueding.
-
-    }
-
+   
     public void GoToCluePage()
     {
         NoteBookCollectibleParent.gameObject.SetActive(false);
         NoteBookClueParent.gameObject.SetActive(true);
         NoteBookCodexParent.gameObject.SetActive(false);
-        if(ClueListPrefab.Count != NoteBookClueList.Count)
+        
+        if (ClueListPrefab.Count != NoteBookClueList.Count)
         {
             foreach (TakeClue clue in NoteBookClueList)
             {
                 Clue ClueToAdd = (Clue)clue.scriptableObject;
                 CluePrefab.GetComponent<InventorySlot>().ClueScriptableObject = ClueToAdd;
-                CluePrefab.GetComponent<InventorySlot>().Clue.SetActive(true);
                 TempPrefab = Instantiate(CluePrefab, NoteBookClueParent);
                 ClueListPrefab.Add(TempPrefab);
-
-                if (clue.ClueFound == true)
-                {
-                    CluePrefab.GetComponent<InventorySlot>().Clue.SetActive(true);
-                }
+                
             }
         }
+
     }
 
     public void GoToCodex()
@@ -159,7 +155,7 @@ public class NoteBook : MonoBehaviour
             CodexPrefab.GetComponent<CodexDisplay>().codex = item;
             TempPrefab = Instantiate(CodexPrefab, NoteBookCodexParent);
             prefabList.Add(TempPrefab);
-            Debug.Log("Adding prefab codex");
+            //Debug.Log("Adding prefab codex");
         }
     }
 
