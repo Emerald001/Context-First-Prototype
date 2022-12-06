@@ -242,7 +242,7 @@ public class MovementManager : MonoBehaviour
     public void ResetTimer(float time) => StartCoroutine(Timer(time));
 
     public void SetInteracting(bool setting) {
-        Interacting = setting;
+        //Interacting = setting;
     }
 
     public IEnumerator Timer(float time) {
