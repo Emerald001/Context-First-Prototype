@@ -62,7 +62,7 @@ public class NoteBook : MonoBehaviour
         codexPages = NoteBookCodexList.CodexList.Count;
         collectiblesPages = NoteBookCollectiblesList.CollectiblesList.Count;
        
-        if (Input.GetKeyDown(KeyCode.Escape) && BookActive == false)
+        if (Input.GetKeyDown(KeyCode.Q) && BookActive == false)
         {
             ToggleParent.gameObject.SetActive(true);
             ResetPage();
@@ -71,7 +71,7 @@ public class NoteBook : MonoBehaviour
             collectiblePageNumber = 1;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Escape) && BookActive == true)
+        else if (Input.GetKeyDown(KeyCode.Q) && BookActive == true)
         {
             ToggleParent.gameObject.SetActive(false);
             //UpdatePages();

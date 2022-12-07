@@ -4,25 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public AudioManager audioManager;
-    public AudioManager a;
+    public AudioManager AmbienceAudio;
 
     private void Start()
     {
-        audioManager.Init();
-        a.Init();
+        AmbienceAudio.Init();
     }
-
+    private void Awake()
+    {
+        
+    }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            audioManager.PlayLoopedAudio("JEMUDR", true);
-        }
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            a.PlayAudio("A");
-        }
+        //AmbienceAudio.PlayLoopedAudio("TownAmbience", true);
+        AmbienceAudio.PlayAudio("TownAmbience");
     }
 }
