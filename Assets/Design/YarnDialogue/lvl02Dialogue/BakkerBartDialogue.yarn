@@ -1,6 +1,8 @@
 ﻿title: BakkerBartDialogue
 tags:
 ---
+<<TriggerInteractionState true>>
+
 Bakker Bart: *gaap* Oh.. goeiemorgen! Lekker vers broodje uit de oven?
 
 -> Er is een ketter ontsnapt, heb jij iets gezien?
@@ -13,5 +15,6 @@ Bakker Bart: Ik ben ten slotte een goede katholiek.
 Bakker Bart: Kijk eerst maar naar anderen, Maria had bijvoorbeeld volgens mij stiekem een oogje op hem.
 
 -> Oke, bedankt.
+<<TriggerInteractionState false>>
 
 ===

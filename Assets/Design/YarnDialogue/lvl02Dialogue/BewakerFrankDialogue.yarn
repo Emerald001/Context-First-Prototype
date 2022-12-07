@@ -1,6 +1,8 @@
 ﻿title: BewakerFrankDialogue
 tags:
 ---
+<<TriggerInteractionState true>>
+
 Frank de Bewaker: Ik kwam er bij mijn standaard ronde achter dat hij ontsnapt was en heb het meteen gerapporteerd aan de heer Cornelis!
 
 -> Was jij niet degene die hem in de gaten moest houden?
@@ -15,5 +17,7 @@ Frank de Bewaker: Men zou mij als eerste verdenken, zo dom ben ik toch niet??
 Frank de Bewaker: Je moet maar eens die monnik ondervragen, hij kwam iedere avond langs.
 
 -> Oke, bedankt.
+<<TriggerInteractionState false>>
+
 
 ===

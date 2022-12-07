@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 11426072}
   - component: {fileID: 11471062}
   - component: {fileID: 11424616}
+  - component: {fileID: 7553752817985625443}
   m_Layer: 0
   m_Name: Dialogue Manager
   m_TagString: Untagged
@@ -314,3 +315,15 @@ MonoBehaviour:
   onUseTouch:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7553752817985625443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4c620b36c10664bb5e1b8bd78036b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

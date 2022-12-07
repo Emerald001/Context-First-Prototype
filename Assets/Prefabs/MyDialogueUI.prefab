@@ -911,11 +911,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightToLeft: 0
   charactersPerSecond: 50
-  audioClip: {fileID: 8300000, guid: 8fe180955e5213848a368f1def868462, type: 3}
+  audioClip: {fileID: 8300000, guid: c81dbfe145f33244381aa7a6a0ab697a, type: 3}
   alternateAudioClips:
-  - {fileID: 8300000, guid: d63882e203509b74db307ed00ea8ea93, type: 3}
-  - {fileID: 8300000, guid: f95ae9be2ef79904bb842801c5544992, type: 3}
-  - {fileID: 8300000, guid: 349bae0096147ed4db0e60744b4e7aef, type: 3}
+  - {fileID: 8300000, guid: 516444e5d5d47a5429b1a499d95a58ba, type: 3}
+  - {fileID: 8300000, guid: fb82fb5cb9d71044f93b46623550c064, type: 3}
+  - {fileID: 8300000, guid: ff3b0f8cc1a712c48bcc69224734c0be, type: 3}
   audioSource: {fileID: 0}
   usePlayOneShot: 0
   interruptAudioClip: 0
@@ -924,7 +924,7 @@ MonoBehaviour:
   silentCharacters: 
   fullPauseCharacters: .
   quarterPauseCharacters: 
-  fullPauseDuration: 0.25
+  fullPauseDuration: 1
   quarterPauseDuration: 0
   removeDuplicateTypewriterEffects: 1
   playOnEnable: 1

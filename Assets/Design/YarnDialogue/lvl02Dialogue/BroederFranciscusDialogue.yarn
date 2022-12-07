@@ -1,9 +1,13 @@
 ﻿title: BroederFranciscusDialogue
 tags:
 ---
+<<TriggerInteractionState true>>
+
 Broeder Franciscus: Zelfs protestanten verdienen het niet om zo wreed behandeld te worden.
 Broeder Franciscus: We zijn allemaal tenslotte mensen.
 Broeder Franciscus: Ik geloof dat iedereen met een goed hart de arme man zou helpen, hij deed geen vlieg kwaad en had enkel een Lutherse bijbel in huis.
 
 -> Oke, bedankt.
+<<TriggerInteractionState false>>
+
 ===

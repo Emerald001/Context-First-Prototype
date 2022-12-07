@@ -21,6 +21,8 @@ public class CameraLookaround : MonoBehaviour
     private float yRotation = 0f;
 
     void Start() {
+        Enabled = true;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

@@ -1,6 +1,8 @@
 ﻿title: CornelisDIalogue
 tags:
 ---
+<<TriggerInteractionState true>>
+
 Cornelis: Heeft u de dader al weten op te sporen?
 
 -> Nee, heeft u hem zelf misschien hebt laten ontsnappen?
@@ -12,4 +14,6 @@ Cornelis: Filips zorgt er met zijn harde aanpak wel voor dat iedereen hier boos 
 Cornelis: Ik kan hem ook gewoon laten weten dat ik die ketter heb laten verbranden...
 
 -> Oke, bedankt.
+<<TriggerInteractionState false>>
+
 ===
