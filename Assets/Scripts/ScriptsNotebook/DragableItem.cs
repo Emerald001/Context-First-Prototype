@@ -91,12 +91,12 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
             //    Debug.Log("NOT GOOD");
             //    winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
             //}
-            Debug.Log(clue.ClueAntwoord + clue.ClueVraag);
+            Debug.Log(clue.ClueAntwoord + " " + clue.ClueVraag);
             if(raycastResult.gameObject.GetComponent<InventorySlot>().Antwoord.text == clue.ClueAntwoord)
             {
                 Debug.Log("IS GOED????");
                 winningCondition.CorrectAnswers.Add(parentAfterDrag.gameObject);
-
+                Debug.Log(winningCondition.CorrectAnswers);
             }
             else if (raycastResult.gameObject.GetComponent<InventorySlot>().Antwoord.text != clue.ClueAntwoord)
             {
@@ -113,10 +113,11 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
     }
-    
+
     public void test()
     {
         winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
         Debug.Log("NOT GOOD");
+        SetRandomPos();
     }
 }

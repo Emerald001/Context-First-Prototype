@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: DialogueBaseLvl2
+  m_Name: DialogueDatabaseLvl2
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -161,8 +161,8 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: 2bf82dcf3b0c3e14480104d24e9a5251, type: 3}
-    spritePortrait: {fileID: 21300000, guid: 2bf82dcf3b0c3e14480104d24e9a5251, type: 3}
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
   - id: 4
@@ -183,8 +183,8 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: fd17190fc8a67984b9a244620fdb5bb1, type: 3}
-    spritePortrait: {fileID: 21300000, guid: fd17190fc8a67984b9a244620fdb5bb1, type: 3}
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
   - id: 5
@@ -205,8 +205,8 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: 82c1b19df54b1d9438ad96ab92e9e405, type: 3}
-    spritePortrait: {fileID: 21300000, guid: 82c1b19df54b1d9438ad96ab92e9e405, type: 3}
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
   - id: 6
@@ -227,33 +227,11 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: db554b8f17c00f4439f02ee645e2fd2d, type: 3}
-    spritePortrait: {fileID: 21300000, guid: db554b8f17c00f4439f02ee645e2fd2d, type: 3}
-    alternatePortraits: []
-    spritePortraits: []
-  - id: 7
-    fields:
-    - title: Name
-      value: title
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
-  - id: 8
+  - id: 7
     fields:
     - title: Name
       value: Maria
@@ -271,8 +249,8 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: 82a11b0e5f528214ea62f74d7442c026, type: 3}
-    spritePortrait: {fileID: 21300000, guid: 82a11b0e5f528214ea62f74d7442c026, type: 3}
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
   items: []
@@ -3059,12 +3037,6 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      - originConversationID: 4
-        originDialogueID: 2
-        destinationConversationID: 4
-        destinationDialogueID: 6
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -3117,7 +3089,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 3
         destinationConversationID: 4
-        destinationDialogueID: 8
+        destinationDialogueID: 6
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3155,7 +3127,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ja, ik weet wie het heeft gedaan!
+        value: Nee, heeft u hem zelf misschien hebt laten ontsnappen?
         type: 0
         typeString: 
       - title: Sequence
@@ -3246,20 +3218,19 @@ MonoBehaviour:
     - id: 6
       fields:
       - title: Title
-        value: Shortcut Option Start
+        value: Run Line
         type: 0
         typeString: 
       - title: Description
-        value: 'Shortcut Option Start - Yarn branch label: L3shortcutoption_CornelisDIalogue_2,
-          Yarn exit label: L1group_end'
+        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-2'
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 6
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3267,7 +3238,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Nee, ik vroeg me af of je hem zelf misschien hebt laten ontsnappen?
+        value: Ik haal jou hier om mij te helpen en je denkt dat ik hem zelf heb
+          bevrijd?
         type: 0
         typeString: 
       - title: Sequence
@@ -3302,119 +3274,6 @@ MonoBehaviour:
     - id: 7
       fields:
       - title: Title
-        value: Shortcut Option End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option End - Yarn branch label: L3shortcutoption_CornelisDIalogue_2,
-          Yarn exit label: L1group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 7
-        destinationConversationID: 4
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 8
-      fields:
-      - title: Title
-        value: Run Command
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Command - cmd: ''jump NotYetClue'''
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 8
-        destinationConversationID: 4
-        destinationDialogueID: 9
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: '_G[''jump''](''NotYetClue'')
-
-'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 9
-      fields:
-      - title: Title
         value: Run Line
         type: 0
         typeString: 
@@ -3435,7 +3294,119 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Fantastisch! Wie heeft de ketter geholpen?
+        value: Misschien ben je een slechtere detective dan ik dacht.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: 
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 7
+        destinationConversationID: 4
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 30
+    - id: 8
+      fields:
+      - title: Title
+        value: Run Line
+        type: 0
+        typeString: 
+      - title: Description
+        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-4'
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ik heb ten slotte zelf het bevel gegeven om hem op te laten pakken
+          en heb hem ter dood veroordeeld!
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: 
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 8
+        destinationConversationID: 4
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: Run Line
+        type: 0
+        typeString: 
+      - title: Description
+        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-5'
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Filips zorgt er met zijn harde aanpak wel voor dat iedereen hier boos
+          wordt, zelf ik wordt nu verdacht!
         type: 0
         typeString: 
       - title: Sequence
@@ -3470,2189 +3441,11 @@ MonoBehaviour:
     - id: 10
       fields:
       - title: Title
-        value: Shortcut Option List Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option List Start - Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 1
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 10
-        destinationConversationID: 4
-        destinationDialogueID: 12
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 10
-        destinationConversationID: 4
-        destinationDialogueID: 14
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 10
-        destinationConversationID: 4
-        destinationDialogueID: 16
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 11
-      fields:
-      - title: Title
-        value: Shortcut Option List End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option List End - Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 11
-        destinationConversationID: 4
-        destinationDialogueID: 18
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 12
-      fields:
-      - title: Title
-        value: Shortcut Option Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option Start - Yarn branch label: L5shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Bakker Bart
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 12
-        destinationConversationID: 4
-        destinationDialogueID: 13
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 13
-      fields:
-      - title: Title
-        value: Shortcut Option End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option End - Yarn branch label: L5shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 13
-        destinationConversationID: 4
-        destinationDialogueID: 11
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 14
-      fields:
-      - title: Title
-        value: Shortcut Option Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option Start - Yarn branch label: L6shortcutoption_CornelisDIalogue_2,
-          Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Frank de Bewaker
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 14
-        destinationConversationID: 4
-        destinationDialogueID: 15
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 15
-      fields:
-      - title: Title
-        value: Shortcut Option End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option End - Yarn branch label: L6shortcutoption_CornelisDIalogue_2,
-          Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 15
-        destinationConversationID: 4
-        destinationDialogueID: 11
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 16
-      fields:
-      - title: Title
-        value: Shortcut Option Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option Start - Yarn branch label: L7shortcutoption_CornelisDIalogue_3,
-          Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Broeder Franciscus
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 16
-        destinationConversationID: 4
-        destinationDialogueID: 17
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 17
-      fields:
-      - title: Title
-        value: Shortcut Option End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option End - Yarn branch label: L7shortcutoption_CornelisDIalogue_3,
-          Yarn exit label: L4group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 17
-        destinationConversationID: 4
-        destinationDialogueID: 11
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 18
-      fields:
-      - title: Title
-        value: Run Command
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Command - cmd: ''jump AnderAntwoord'''
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 18
-        destinationConversationID: 4
-        destinationDialogueID: 19
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: '_G[''jump''](''AnderAntwoord'')
-
-'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 19
-      fields:
-      - title: Title
-        value: Shortcut Option List Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option List Start - Yarn exit label: L8group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 1
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 19
-        destinationConversationID: 4
-        destinationDialogueID: 21
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 20
-      fields:
-      - title: Title
-        value: Shortcut Option List End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option List End - Yarn exit label: L8group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 20
-        destinationConversationID: 4
-        destinationDialogueID: 23
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 21
-      fields:
-      - title: Title
-        value: Shortcut Option Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option Start - Yarn branch label: L9shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L8group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Maria
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 21
-        destinationConversationID: 4
-        destinationDialogueID: 22
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 22
-      fields:
-      - title: Title
-        value: Shortcut Option End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option End - Yarn branch label: L9shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L8group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 22
-        destinationConversationID: 4
-        destinationDialogueID: 20
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 23
-      fields:
-      - title: Title
-        value: Run Command
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Command - cmd: ''jump GoedAntwoord'''
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 23
-        destinationConversationID: 4
-        destinationDialogueID: 24
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: '_G[''jump''](''GoedAntwoord'')
-
-'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 24
-      fields:
-      - title: Title
-        value: Shortcut Option List Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option List Start - Yarn exit label: L10group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 1
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 24
-        destinationConversationID: 4
-        destinationDialogueID: 26
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 25
-      fields:
-      - title: Title
-        value: Shortcut Option List End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option List End - Yarn exit label: L10group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 25
-        destinationConversationID: 4
-        destinationDialogueID: 28
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 26
-      fields:
-      - title: Title
-        value: Shortcut Option Start
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option Start - Yarn branch label: L11shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L10group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Cornelis
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 26
-        destinationConversationID: 4
-        destinationDialogueID: 27
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 27
-      fields:
-      - title: Title
-        value: Shortcut Option End
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Shortcut Option End - Yarn branch label: L11shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L10group_end'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 27
-        destinationConversationID: 4
-        destinationDialogueID: 25
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 28
-      fields:
-      - title: Title
-        value: Run Command
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Command - cmd: ''jump CornelisAntwoord'''
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Continue()
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 28
-        destinationConversationID: 4
-        destinationDialogueID: 29
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: '_G[''jump''](''CornelisAntwoord'')
-
-'
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 29
-      fields:
-      - title: Title
         value: Run Line
         type: 0
         typeString: 
       - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-9'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: ---
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 29
-        destinationConversationID: 4
-        destinationDialogueID: 30
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 30
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-10'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 7
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: AnderAntwoord
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 30
-        destinationConversationID: 4
-        destinationDialogueID: 31
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 31
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-11'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Hmm, weet je het zeker? Ik wil niet de verkeerde persoon opsluiten
-          voor een misdaad die ze niet hebben gepleegd...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 31
-        destinationConversationID: 4
-        destinationDialogueID: 32
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 32
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-12'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: ---
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 32
-        destinationConversationID: 4
-        destinationDialogueID: 33
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 33
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-13'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 7
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: CornelisAntwoord
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 33
-        destinationConversationID: 4
-        destinationDialogueID: 34
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 34
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-14'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Wat? De geruchten waren dus fout, u bent zeker niet zo slim als men
-          dacht...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 34
-        destinationConversationID: 4
-        destinationDialogueID: 35
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 35
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-15'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 7
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: GoedAntwoord
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 35
-        destinationConversationID: 4
-        destinationDialogueID: 36
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 36
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-16'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Wat??
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 36
-        destinationConversationID: 4
-        destinationDialogueID: 37
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 37
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-17'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Mijn eigen vrouw...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 37
-        destinationConversationID: 4
-        destinationDialogueID: 38
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 38
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-18'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Dit is niet mogelijk...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 38
-        destinationConversationID: 4
-        destinationDialogueID: 39
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 39
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-19'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Oke, dit blijft tussen ons, niemand mag dit te weten komen!
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 39
-        destinationConversationID: 4
-        destinationDialogueID: 40
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 40
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-20'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Ik geef u extra zilver dan beloofd, alstublieft.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 40
-        destinationConversationID: 4
-        destinationDialogueID: 41
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 41
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-21'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Bedankt, maareh... Moet u niet snel verder?
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 41
-        destinationConversationID: 4
-        destinationDialogueID: 42
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 42
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-22'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '*kuch kuch*'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 42
-        destinationConversationID: 4
-        destinationDialogueID: 43
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 43
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-23'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: ---
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 43
-        destinationConversationID: 4
-        destinationDialogueID: 44
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 44
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-24'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 7
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: NotYetClue
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 44
-        destinationConversationID: 4
-        destinationDialogueID: 45
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 45
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-25'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Ik haal jou hier om mij te helpen en je denkt dat ik hem zelf heb
-          bevrijd?
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 45
-        destinationConversationID: 4
-        destinationDialogueID: 46
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 46
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-26'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Misschien ben je een slechtere detective dan ik dacht.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 46
-        destinationConversationID: 4
-        destinationDialogueID: 47
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 47
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-27'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Ik heb ten slotte zelf het bevel gegeven om hem op te laten pakken
-          en heb hem ter dood veroordeeld!
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 47
-        destinationConversationID: 4
-        destinationDialogueID: 48
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 48
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-28'
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Filips zorgt er met zijn harde aanpak wel voor dat iedereen hier boos
-          wordt, zelf ik wordt nu verdacht!
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 48
-        destinationConversationID: 4
-        destinationDialogueID: 49
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 30
-    - id: 49
-      fields:
-      - title: Title
-        value: Run Line
-        type: 0
-        typeString: 
-      - title: Description
-        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-29'
+        value: 'Run Line - line key: CornelisDIalogue-CornelisDIalogue-6'
         type: 0
         typeString: 
       - title: Actor
@@ -5684,9 +3477,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
-        originDialogueID: 49
+        originDialogueID: 10
         destinationConversationID: 4
-        destinationDialogueID: 50
+        destinationDialogueID: 11
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5700,14 +3493,14 @@ MonoBehaviour:
         y: 0
         width: 160
         height: 30
-    - id: 50
+    - id: 11
       fields:
       - title: Title
         value: Shortcut Option List Start
         type: 0
         typeString: 
       - title: Description
-        value: 'Shortcut Option List Start - Yarn exit label: L12group_end'
+        value: 'Shortcut Option List Start - Yarn exit label: L3group_end'
         type: 0
         typeString: 
       - title: Actor
@@ -5739,9 +3532,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
-        originDialogueID: 50
+        originDialogueID: 11
         destinationConversationID: 4
-        destinationDialogueID: 52
+        destinationDialogueID: 13
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5755,14 +3548,14 @@ MonoBehaviour:
         y: 0
         width: 160
         height: 30
-    - id: 51
+    - id: 12
       fields:
       - title: Title
         value: Shortcut Option List End
         type: 0
         typeString: 
       - title: Description
-        value: 'Shortcut Option List End - Yarn exit label: L12group_end'
+        value: 'Shortcut Option List End - Yarn exit label: L3group_end'
         type: 0
         typeString: 
       - title: Actor
@@ -5804,15 +3597,15 @@ MonoBehaviour:
         y: 0
         width: 160
         height: 30
-    - id: 52
+    - id: 13
       fields:
       - title: Title
         value: Shortcut Option Start
         type: 0
         typeString: 
       - title: Description
-        value: 'Shortcut Option Start - Yarn branch label: L13shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L12group_end'
+        value: 'Shortcut Option Start - Yarn branch label: L4shortcutoption_CornelisDIalogue_1,
+          Yarn exit label: L3group_end'
         type: 0
         typeString: 
       - title: Actor
@@ -5844,9 +3637,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
-        originDialogueID: 52
+        originDialogueID: 13
         destinationConversationID: 4
-        destinationDialogueID: 53
+        destinationDialogueID: 14
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5860,15 +3653,15 @@ MonoBehaviour:
         y: 0
         width: 160
         height: 30
-    - id: 53
+    - id: 14
       fields:
       - title: Title
         value: Shortcut Option End
         type: 0
         typeString: 
       - title: Description
-        value: 'Shortcut Option End - Yarn branch label: L13shortcutoption_CornelisDIalogue_1,
-          Yarn exit label: L12group_end'
+        value: 'Shortcut Option End - Yarn branch label: L4shortcutoption_CornelisDIalogue_1,
+          Yarn exit label: L3group_end'
         type: 0
         typeString: 
       - title: Actor
@@ -5900,9 +3693,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
-        originDialogueID: 53
+        originDialogueID: 14
         destinationConversationID: 4
-        destinationDialogueID: 51
+        destinationDialogueID: 12
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6253,7 +4046,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
+        value: 7
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6308,7 +4101,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
+        value: 7
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6364,7 +4157,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
+        value: 7
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant

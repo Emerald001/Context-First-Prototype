@@ -266,8 +266,8 @@ MonoBehaviour:
   player: {fileID: 0}
   mouseSensitivity: 400
   followSpeed: 0
-  MaxAngleLook: 90
-  MinAngleLook: -90
+  MaxAngleLook: 40
+  MinAngleLook: -70
   turnPlayer: 1
 --- !u!1 &5388962538576540066
 GameObject:

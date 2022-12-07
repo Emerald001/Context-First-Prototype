@@ -103,7 +103,10 @@ public class MovementManager : MonoBehaviour
             if (tmp != null) {
                 animations.HandToObject(tmp, false);
                 if (Input.GetKeyDown(KeyCode.E))
-                    return true;
+                {
+                    tmp.GetComponent<IInteractable>().Interact();
+                    return false;
+                }
             }
             else
                 animations.ResetIK();
@@ -241,9 +244,9 @@ public class MovementManager : MonoBehaviour
 
     public void ResetTimer(float time) => StartCoroutine(Timer(time));
 
-    public void SetInteracting(bool setting) {
-        //Interacting = setting;
-    }
+/*    public void SetInteracting(bool setting) {
+        Interacting = setting;
+    }*/
 
     public IEnumerator Timer(float time) {
         yield return new WaitForSeconds(time);

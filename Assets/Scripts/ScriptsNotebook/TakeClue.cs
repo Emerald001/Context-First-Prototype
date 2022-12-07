@@ -13,6 +13,7 @@ public class TakeClue : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        Debug.Log("talking");
         //noteBook.ToggleClueFound(scriptableObject);
         if(ClueFound == false)
         {

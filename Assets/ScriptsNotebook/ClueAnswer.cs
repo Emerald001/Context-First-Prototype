@@ -9,6 +9,7 @@ public class ClueAnswer : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("test");
         Antwoord.text = ClueScriptableObject.ClueAntwoord;
     }
 

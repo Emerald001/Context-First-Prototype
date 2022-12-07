@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WinningCondition : MonoBehaviour
 {
+    public Canvas endcanvas;
     public List<GameObject> CorrectAnswers = new List<GameObject>();
     private NoteBook noteBook;
 
@@ -17,6 +18,7 @@ public class WinningCondition : MonoBehaviour
     {
         if(CorrectAnswers.Count >= noteBook.NoteBookClueList.Count)
         {
+            endcanvas.gameObject.SetActive(true);
             Debug.Log("YOU WIN");
         }
     }
