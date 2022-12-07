@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     public GameObject InteractText;
-
+    public ClueHelperScript clueHelper;
     private Vector3 origin, direction;
     private bool interactionHit;
     private float currentHitDistance;
@@ -23,7 +23,6 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         CheckInteractable();
     }
 
@@ -40,15 +39,15 @@ public class PlayerInteract : MonoBehaviour
 
             if (hit.collider.gameObject.GetComponentInParent<IInteractable>() != null)
             {
-                Debug.Log("You've hit something interactable!");
+                //Debug.Log("You've hit something interactable!");
                 InteractText.gameObject.SetActive(true);
-
+                
                 InteractWith();
             }
         }
         else
         {
-            Debug.Log("Nothing!");
+            //Debug.Log("Nothing!");
             InteractText.gameObject.SetActive(false);
             interactionHit = false;
         }
@@ -62,6 +61,14 @@ public class PlayerInteract : MonoBehaviour
         if (interactionHit == true && Input.GetKeyDown(KeyCode.E))
         {
             hit.collider.gameObject.GetComponentInParent<IInteractable>().Interact();
+
+            if (hit.collider.gameObject.GetComponent<TakeClue>() != null)
+            {
+                clueHelper.AddObjectToList(hit.collider.gameObject.GetComponent<TakeClue>());
+                //Destroy(hit.collider.gameObject.GetComponent<TakeClue>());
+            }
         }
+
+        
     }
 }

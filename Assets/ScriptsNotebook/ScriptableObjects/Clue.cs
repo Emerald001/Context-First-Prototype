@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 [CreateAssetMenu(fileName = "New Clue", menuName = "Clue")]
 
 public class Clue : ScriptableObject
