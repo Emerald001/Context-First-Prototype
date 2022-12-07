@@ -40,6 +40,7 @@ public class MovementManager : MonoBehaviour
     public int jumpAmount;
     public float spherecheckRadius;
     public float climbTime;
+    public float collectableRadius;
 
     [Header("Animation Settings")]
     public Animator animator;
