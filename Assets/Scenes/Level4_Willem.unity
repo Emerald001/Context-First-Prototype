@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: displaySettings.dialogueUI
       value: 
       objectReference: {fileID: 819144747}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6193717574850487428, guid: 58ac37417e60e534f91138088a3e6f70,
         type: 3}
       propertyPath: m_ReferenceResolution.x
@@ -747,6 +751,7 @@ GameObject:
   - component: {fileID: 14774786}
   - component: {fileID: 14774785}
   - component: {fileID: 14774787}
+  - component: {fileID: 14774788}
   m_Layer: 0
   m_Name: pistool
   m_TagString: Untagged
@@ -850,8 +855,33 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.989998, y: 7.130001, z: 0.20000003}
-  m_Center: {x: 0.000061035156, y: 0, z: -0.0000019073486}
+  m_Size: {x: 16.989998, y: 7.130001, z: 18.720068}
+  m_Center: {x: 0.00006105724, y: 9.70033e-14, z: -9.260032}
+--- !u!114 &14774788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14774783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 5
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &15624141
 GameObject:
   m_ObjectHideFlags: 0
@@ -11857,7 +11887,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 0}
+  selectedDatabase: {fileID: 11400000, guid: 80ee0f78ff9e72f4083f6495c2d79b4b, type: 2}
 --- !u!114 &209880360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47563,6 +47593,11 @@ PrefabInstance:
       propertyPath: YRotationParent
       value: 
       objectReference: {fileID: 174670170}
+    - target: {fileID: 8495559347209190235, guid: 05a377fc875c4824ba02ad9f69faf64c,
+        type: 3}
+      propertyPath: collectableRadius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8495559347209190236, guid: 05a377fc875c4824ba02ad9f69faf64c,
         type: 3}
       propertyPath: m_RootOrder
@@ -94534,6 +94569,7 @@ MonoBehaviour:
   ClueListPrefab: []
   currentPage: 0
   CollectiblesFound: 0
+  movement: {fileID: 872738363}
 --- !u!114 &1891951275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105691,7 +105727,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 0}
+  selectedDatabase: {fileID: 11400000, guid: 80ee0f78ff9e72f4083f6495c2d79b4b, type: 2}
 --- !u!43 &2096323767
 Mesh:
   m_ObjectHideFlags: 0

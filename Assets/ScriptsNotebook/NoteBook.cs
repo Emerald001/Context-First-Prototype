@@ -36,6 +36,8 @@ public class NoteBook : MonoBehaviour
     private bool CluesMade = false;
     private ClueHelperScript clueHelper;
     private bool max;
+    public MovementManager movement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +81,7 @@ public class NoteBook : MonoBehaviour
             GoToCluePage();
             BookActive = true;
             //collectiblePageNumber = 1;
+            movement.SetInteracting(true);
         }
 
         else if (Input.GetKeyDown(KeyCode.Q) && BookActive == true)
@@ -86,6 +89,8 @@ public class NoteBook : MonoBehaviour
             ToggleParent.gameObject.SetActive(false);
             //UpdatePages();
             BookActive = false;
+            movement.SetInteracting(false);
+
         }
     }
 
