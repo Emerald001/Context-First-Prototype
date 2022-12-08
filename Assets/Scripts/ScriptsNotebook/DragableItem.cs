@@ -22,6 +22,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
     public bool posSet = false;
     //public Vector3 newPos;
     Vector3 Position;
+    public RaycastResult raycastResult;
 
     void Start()
     {
@@ -58,8 +59,19 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+
         transform.SetParent(CanvasTransform.transform);
         transform.SetAsLastSibling();
+        if (winningCondition.CorrectAnswers.Contains(gameObject.GetComponent<ClueAnswer>().ClueScriptableObject))
+        {
+            winningCondition.CorrectAnswers.Remove(gameObject.GetComponent<ClueAnswer>().ClueScriptableObject);
+            Debug.Log("IK ZAT ER AL IN");
+        }
+        else
+        {
+            Debug.Log("IK ZAT ER NOG NIET IN");
+        }
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -76,9 +88,10 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
     public void OnPointerUp(PointerEventData eventData)
     {
         //gameObject.transform.position = newPos;
-        RaycastResult raycastResult = eventData.pointerCurrentRaycast;
+        raycastResult = eventData.pointerCurrentRaycast;
         if (raycastResult.gameObject?.tag == destinationTag)
         {
+
             transform.position = raycastResult.gameObject.transform.position;
             transform.SetParent(raycastResult.gameObject.transform);
             //if(raycastResult.gameObject.transform == parentAfterDrag)
@@ -95,13 +108,13 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
             if(raycastResult.gameObject.GetComponent<InventorySlot>().Antwoord.text == clue.ClueAntwoord)
             {
                 Debug.Log("IS GOED????");
-                winningCondition.CorrectAnswers.Add(parentAfterDrag.gameObject);
+                winningCondition.CorrectAnswers.Add(gameObject.GetComponent<ClueAnswer>().ClueScriptableObject);
                 Debug.Log(winningCondition.CorrectAnswers);
             }
             else if (raycastResult.gameObject.GetComponent<InventorySlot>().Antwoord.text != clue.ClueAntwoord)
             {
                 Debug.Log("IS NIET GOED!!!");
-                winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
+                winningCondition.CorrectAnswers.Remove(gameObject.GetComponent<ClueAnswer>().ClueScriptableObject);
             }
         }
         else
@@ -116,8 +129,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
 
     public void test()
     {
-        winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
+        winningCondition.CorrectAnswers.Remove(gameObject.GetComponent<ClueAnswer>().ClueScriptableObject);
         Debug.Log("NOT GOOD");
-        SetRandomPos();
     }
 }
