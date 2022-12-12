@@ -8,6 +8,7 @@ public class CameraLookaround : MonoBehaviour
     public Transform XRotTransform;
 
     public Transform player;
+    public bool Enabled;
 
     public float mouseSensitivity = 100f;
     public float followSpeed;
@@ -20,11 +21,16 @@ public class CameraLookaround : MonoBehaviour
     private float yRotation = 0f;
 
     void Start() {
+        Enabled = true;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void Update() {
+        if (!Enabled)
+            return;
+
         if (followSpeed > 0) {
             transform.position = Vector3.Lerp(transform.position, ObjectToFollow.transform.position, followSpeed * Time.deltaTime);
             CheckBackwards();

@@ -40,6 +40,7 @@ public class MovementManager : MonoBehaviour
     public int jumpAmount;
     public float spherecheckRadius;
     public float climbTime;
+    public float collectableRadius;
 
     [Header("Animation Settings")]
     public Animator animator;
@@ -64,6 +65,8 @@ public class MovementManager : MonoBehaviour
     [HideInInspector] public bool canGrabNextLedge = true;
     [HideInInspector] public bool lookAtMoveDir = true;
     [HideInInspector] public GameObject CurrentLedge = null;
+
+    [HideInInspector] public bool Interacting;
 
     void Start() {
         controller = GetComponent<CharacterController>();
@@ -95,12 +98,16 @@ public class MovementManager : MonoBehaviour
         AddTransitionWithBool(groundedState, !evaluator.IsGrounded(), typeof(AirbornState));
         AddTransitionWithKey(groundedState, KeyCode.LeftControl, typeof(CrouchingState));
         AddTransitionWithKey(groundedState, KeyCode.LeftShift, typeof(SprintingState));
+        AddTransitionWithPrediquete(groundedState, (x) => { return Interacting; }, typeof(InteractionState));
         AddTransitionWithPrediquete(groundedState, (x) => {
             var tmp = evaluator.CollectableNearby();
             if (tmp != null) {
                 animations.HandToObject(tmp, false);
                 if (Input.GetKeyDown(KeyCode.E))
-                    return true;
+                {
+                    tmp.GetComponent<IInteractable>().Interact();
+                    return false;
+                }
             }
             else
                 animations.ResetIK();
@@ -192,6 +199,7 @@ public class MovementManager : MonoBehaviour
 
         var interactionState = new InteractionState(movementStateMachine);
         movementStateMachine.AddState(typeof(InteractionState), interactionState);
+        AddTransitionWithPrediquete(interactionState, (x) => { return !Interacting; }, typeof(GroundedState));
 
         movementStateMachine.ChangeState(typeof(GroundedState));
     }
@@ -236,6 +244,11 @@ public class MovementManager : MonoBehaviour
     }
 
     public void ResetTimer(float time) => StartCoroutine(Timer(time));
+
+    public void SetInteracting(bool setting)
+    {
+        Interacting = setting;
+    }
 
     public IEnumerator Timer(float time) {
         yield return new WaitForSeconds(time);

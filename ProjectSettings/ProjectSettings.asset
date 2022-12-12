@@ -767,7 +767,9 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: TMP_PRESENT;USE_TIMELINE;USE_YARN
+    WebGL: TMP_PRESENT;USE_TIMELINE;USE_YARN
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

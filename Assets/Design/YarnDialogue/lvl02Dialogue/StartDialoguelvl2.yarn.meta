@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: fb467034715056b4d86ac2998c84042e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: nl-NL
+  stringIDs:
+  - StartDialoguelvl2-StartDialogue-0
+  - StartDialoguelvl2-StartDialogue-1
+  - StartDialoguelvl2-StartDialogue-2
+  - StartDialoguelvl2-StartDialogue-3
+  - StartDialoguelvl2-StartDialogue-4
+  - StartDialoguelvl2-StartDialogue-5
+  - StartDialoguelvl2-StartDialogue-6
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: fb467034715056b4d86ac2998c84042e,
+    type: 3}
+  localizations: []

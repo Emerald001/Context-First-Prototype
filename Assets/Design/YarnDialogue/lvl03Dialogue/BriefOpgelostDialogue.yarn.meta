@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 1a42d869107a9a54599790ce9a29960f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: nl-NL
+  stringIDs:
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-0
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-1
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-2
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-3
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-4
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-5
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-6
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-7
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-8
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-9
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-10
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-11
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-12
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-13
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-14
+  - BriefOpgelostDialogue-BriefOpgelostDialogue-15
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 1a42d869107a9a54599790ce9a29960f,
+    type: 3}
+  localizations: []

@@ -31,7 +31,7 @@ public class MovementEvaluator
     }
 
     public GameObject CollectableNearby() {
-        var tmp = new List<Collider>(Physics.OverlapSphere(owner.LedgeCheck.transform.position, .5f));
+        var tmp = new List<Collider>(Physics.OverlapSphere(owner.LedgeCheck.transform.position, owner.collectableRadius));
 
         for (int i = tmp.Count - 1; i >= 0; i--) {
             if (tmp[i].GetComponent<IInteractable>() != null)

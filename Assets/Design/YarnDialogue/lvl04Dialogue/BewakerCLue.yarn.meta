@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: db894e95611c5b248abde310b1b9a41d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: nl-NL
+  stringIDs:
+  - BewakerCLue-BewakerCLue-0
+  - BewakerCLue-BewakerCLue-1
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: db894e95611c5b248abde310b1b9a41d,
+    type: 3}
+  localizations: []
