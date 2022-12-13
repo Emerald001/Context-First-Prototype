@@ -7,6 +7,7 @@ using TMPro;
 
 public class DialogSystem : MonoBehaviour {
     [Header("Reference")]
+    public GameObject DialogueSystemObject;
     public TextMeshProUGUI mainText;
     public TextMeshProUGUI nameText;
     public Image Portrait;
@@ -60,11 +61,7 @@ public class DialogSystem : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.S)) {
-            SetDialog("Test 1");
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) {
             NextLine();
         }
     }
@@ -73,6 +70,7 @@ public class DialogSystem : MonoBehaviour {
         if (Files.ContainsKey(DialogName)) {
             index = 0;
             currentDialog = Files[DialogName];
+            DialogueSystemObject.SetActive(true);
             NextLine();
         }
         else
@@ -87,6 +85,7 @@ public class DialogSystem : MonoBehaviour {
             currentDialog = null;
             mainText.text = "";
             nameText.text = "";
+            DialogueSystemObject.SetActive(false);
             index = 0;
             return;
         }

@@ -25,15 +25,10 @@ public class DialogFunctionality
     public void SetEvents() {
         EventManager<float>.Subscribe(EventType.DIALOG_SET_TYPE_TIME, SetTimeBetweenChars);
         EventManager<string>.Subscribe(EventType.DIALOG_SET_PORTRAIT, SetSprite);
-        EventManager<bool>.Subscribe(EventType.SET_INTERACTION_STATE, SetInteractionState);
     }
 
     public void SetTimeBetweenChars(float speed) {
         Owner.TimeBetweenChars = speed;
-    }
-
-    public void SetInteractionState(bool setting) {
-        //EventManager<bool>.Invoke(EventType.SET_INTERACTION_STATE, setting);
     }
 
     public void SetSprite(string SpriteName) {

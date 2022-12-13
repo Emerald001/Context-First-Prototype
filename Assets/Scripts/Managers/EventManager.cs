@@ -7,7 +7,7 @@ public enum EventType {
     ON_DIALOG_STARTED,
     DIALOG_SET_TYPE_TIME,
     DIALOG_SET_PORTRAIT,
-    SET_INTERACTION_STATE
+    SET_INTERACTION_STATE,
 }
 
 public static class EventManager {
