@@ -12,22 +12,22 @@ public class NoteBook : MonoBehaviour
     public Transform NoteBookCodexParent;
     public Transform ToggleParent;
 
-    public int codexPages;
+    [HideInInspector] public int codexPages;
     public int collectiblesPages;
-    public int maxPages;
-    public int ClueTreshhold;
-    public int codexPageNumber;
-    public int collectiblePageNumber;
+    [HideInInspector] public int maxPages;
+    [HideInInspector] public int ClueTreshhold;
+    [HideInInspector] public int codexPageNumber;
+    [HideInInspector] public int collectiblePageNumber;
     [HideInInspector] public bool clueActive = false;
     [HideInInspector] public bool BookActive;
 
     [HideInInspector] public CollectiblePagesList NoteBookCollectiblesList = new CollectiblePagesList();
-    public List<TakeClue> NoteBookClueList = new List<TakeClue>();
+    [HideInInspector] public List<TakeClue> NoteBookClueList = new List<TakeClue>();
     public CodexPageList NoteBookCodexList = new CodexPageList();
 
-    public List<Page> CurrentPageList = new List<Page>();
-    public List<GameObject> prefabList = new List<GameObject>();
-    public List<GameObject> ClueListPrefab = new List<GameObject>();
+    [HideInInspector] public List<Page> CurrentPageList = new List<Page>();
+    [HideInInspector] public List<GameObject> prefabList = new List<GameObject>();
+    [HideInInspector] public List<GameObject> ClueListPrefab = new List<GameObject>();
 
     public int currentPage;
     private GameObject TempPrefab;
@@ -50,8 +50,7 @@ public class NoteBook : MonoBehaviour
         NoteBookCollectiblesList.CollectiblesList[0].PageList = new List<ScriptableObject>();
 
         TakeClue[] FindClues = FindObjectsOfType<TakeClue>();
-        foreach (TakeClue clue in FindClues)
-        {
+        foreach (TakeClue clue in FindClues){
             NoteBookClueList.Add(clue);
         }
 
@@ -69,8 +68,12 @@ public class NoteBook : MonoBehaviour
         maxPages = codexPages + collectiblesPages;
         ClueTreshhold = codexPages - 1;
 
-        if (Input.GetKeyDown(KeyCode.Escape) && BookActive == false)
-        {
+        ActivateBook();
+    }
+
+    public void ActivateBook()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && BookActive == false){
             currentPage = 0;
             codexPageNumber = 0;
             collectiblePageNumber = 0;
@@ -81,13 +84,20 @@ public class NoteBook : MonoBehaviour
             //collectiblePageNumber = 1;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Escape) && BookActive == true)
-        {
+        else if (Input.GetKeyDown(KeyCode.Escape) && BookActive == true){
             ToggleParent.gameObject.SetActive(false);
             //UpdatePages();
             BookActive = false;
         }
+
+        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) && BookActive == true){
+            PageLeft();
+        }
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) && BookActive == true){
+            PageRight();
+        }
     }
+
 
     //Clears everything from the page, and adds the items from the current page
     public void ResetPage()
@@ -95,50 +105,41 @@ public class NoteBook : MonoBehaviour
             foreach (GameObject prefabItem in prefabList){
                 Destroy(prefabItem);
             }
-
             prefabList.RemoveAll(GameObject => GameObject == null);
             prefabList.Clear();
             CurrentPageList.Clear();
     }
     public void GoToCollectibles()
     {
-            NoteBookCollectibleParent.gameObject.SetActive(true);
+        NoteBookCollectibleParent.gameObject.SetActive(true);
             NoteBookClueParent.gameObject.SetActive(false);
             NoteBookCodexParent.gameObject.SetActive(false);
 
-
-            if(CollectiblesFound > 0)
-        {
-            CurrentPageList.Add(NoteBookCollectiblesList.CollectiblesList[currentPage -1]);
-            foreach (Collectible item in CurrentPageList[0].PageList)
-            {
-                Collectibleprefab.GetComponent<CollectibleDisplay>().collectible = (Collectible)item;
-                TempPrefab = Instantiate(Collectibleprefab, NoteBookCollectibleParent);
-                prefabList.Add(TempPrefab);
+            if(CollectiblesFound > 0){
+                CurrentPageList.Add(NoteBookCollectiblesList.CollectiblesList[currentPage -1]);
+                foreach (Collectible item in CurrentPageList[0].PageList){
+                    Collectibleprefab.GetComponent<CollectibleDisplay>().collectible = (Collectible)item;
+                    TempPrefab = Instantiate(Collectibleprefab, NoteBookCollectibleParent);
+                    prefabList.Add(TempPrefab);
+                }
             }
-
-        }
-
-        
     }
    
     public void GoToCluePage()
     {
+        
         NoteBookCollectibleParent.gameObject.SetActive(false);
         NoteBookClueParent.gameObject.SetActive(true);
         NoteBookCodexParent.gameObject.SetActive(false);
         
-        if (ClueListPrefab.Count != NoteBookClueList.Count)
-        {
-            foreach (TakeClue clue in NoteBookClueList)
-            {
+        if (ClueListPrefab.Count != NoteBookClueList.Count){
+            foreach (TakeClue clue in NoteBookClueList){
                 Clue ClueToAdd = (Clue)clue.scriptableObject;
                 CluePrefab.GetComponent<InventorySlot>().ClueScriptableObject = ClueToAdd;
                 TempPrefab = Instantiate(CluePrefab, NoteBookClueParent);
                 ClueListPrefab.Add(TempPrefab);
             }
         }
-
     }
 
     public void GoToCodex()
@@ -147,8 +148,7 @@ public class NoteBook : MonoBehaviour
         NoteBookClueParent.gameObject.SetActive(false);
         NoteBookCodexParent.gameObject.SetActive(true);
 
-        foreach (GameObject prefabItem in prefabList)
-        {
+        foreach (GameObject prefabItem in prefabList){
             Destroy(prefabItem);
         }
 
@@ -157,8 +157,7 @@ public class NoteBook : MonoBehaviour
         CurrentPageList.Clear();
 
         CurrentPageList.Add(NoteBookCodexList.CodexList[currentPage - NoteBookCollectiblesList.CollectiblesList.Count -1]);
-        foreach (Codex item in CurrentPageList[0].PageList)
-        {
+        foreach (Codex item in CurrentPageList[0].PageList){
             CodexPrefab.GetComponent<CodexDisplay>().codex = item;
             TempPrefab = Instantiate(CodexPrefab, NoteBookCodexParent);
             prefabList.Add(TempPrefab);
@@ -171,13 +170,11 @@ public class NoteBook : MonoBehaviour
     {
         CollectiblesFound++;
 
-        if (CollectiblesFound <= 6)
-        {
+        if (CollectiblesFound <= 6){
             int index = NoteBookCollectiblesList.CollectiblesList.Count - 1;
             NoteBookCollectiblesList.CollectiblesList[index].PageList.Add(scriptableObject);
 
-            if (CollectiblesFound >= 6)
-            {
+            if (CollectiblesFound >= 6){
                 ResetList();
             }
         }
@@ -191,82 +188,72 @@ public class NoteBook : MonoBehaviour
         NoteBookCollectiblesList.CollectiblesList.Add(new Page());
         index2++;
         NoteBookCollectiblesList.CollectiblesList[index2].PageList = new List<ScriptableObject>();
-       
     }
 
     //Page buttons
     public void PageRight()
     {
-        if(currentPage == 0)
-        {
-            codexPageNumber = 0;
+        if(currentPage == 0){
             ResetPage();
+            codexPageNumber = 0;
             collectiblePageNumber++;
             currentPage++;
             Debug.Log("Page right going to Collectibles");
             GoToCollectibles();
             max = false;
-
         }
         else if(currentPage >= 1 && collectiblePageNumber < collectiblesPages)
         {
-            codexPageNumber = 0;
             ResetPage();
+            codexPageNumber = 0;
             collectiblePageNumber++;
             currentPage++;
             Debug.Log("Page right going to Collectibles");
             GoToCollectibles();
             max = false;
         }
-        else if (collectiblePageNumber == collectiblesPages && max == false)
-        {
-            ResetPage();
+        else if (collectiblePageNumber == collectiblesPages && max == false){
             clueActive = false;
+            ResetPage();
             currentPage++;
             Debug.Log("Page right going to Codex");
             GoToCodex();
             codexPageNumber++;
             max = false;
         }
-        if (codexPageNumber == codexPages)
-        {
+        if (codexPageNumber == codexPages){
             max = true;
             Debug.Log("END");
         }
-
-        
     }
 
     public void PageLeft()
     {
-        if(currentPage > 0)
-        {
+        if(currentPage > 0){
             if (codexPageNumber > 1)
             {
+                ResetPage();
                 Debug.Log("Codex, left");
                 codexPageNumber--;
 
-                ResetPage();
                 currentPage--;
                 GoToCodex();
             }
             else if (codexPageNumber == 1 && collectiblePageNumber > 0)
             {
-
+                ResetPage();
                 clueActive = false;
                 collectiblePageNumber--;
-                ResetPage();
                 currentPage--;
                 Debug.Log("Page left going to collectibles");
                 GoToCollectibles();
             }
-            else if (currentPage == 1)
-            {
+            else if (currentPage == 1){
+                ResetPage();
                 clueActive = true;
                 codexPageNumber--;
                 collectiblePageNumber--;
 
-                ResetPage();
                 currentPage--;
                 Debug.Log("Page left going to clue");
                 GoToCluePage();
@@ -274,5 +261,33 @@ public class NoteBook : MonoBehaviour
                 codexPageNumber = 0;
             }
         }
+    }
+
+    public void ClueBookmark()
+    {
+        currentPage = 0;
+        codexPageNumber = 0;
+        collectiblePageNumber = 0;
+        ResetPage();
+        GoToCluePage();
+    }
+    public void CollectiblesBookmark()
+    {
+        currentPage = 1;
+        collectiblePageNumber = 1;
+        codexPageNumber = 0;
+        clueActive = false;
+        ResetPage();
+        GoToCollectibles();
+
+    }
+    public void CodexBookmark()
+    {
+        currentPage = collectiblesPages + 1;
+        codexPageNumber = 1;
+        collectiblePageNumber = collectiblesPages;
+        clueActive = false;
+        ResetPage();
+        GoToCodex();
     }
 }

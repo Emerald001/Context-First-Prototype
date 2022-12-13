@@ -36,6 +36,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
 
     }
 
+   
     public void SetRandomPos()
     {
         //Debug.Log("Hyva");
@@ -77,6 +78,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
     {
         //gameObject.transform.position = newPos;
         RaycastResult raycastResult = eventData.pointerCurrentRaycast;
+
         if (raycastResult.gameObject?.tag == destinationTag)
         {
             transform.position = raycastResult.gameObject.transform.position;
