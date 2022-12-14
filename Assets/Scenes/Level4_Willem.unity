@@ -249,7 +249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 9
+=======
+      value: 7
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,7 +741,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 7
+=======
+  m_RootOrder: 6
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14774783
 GameObject:
@@ -23822,7 +23830,11 @@ Transform:
   - {fileID: 14774784}
   - {fileID: 258514778}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 10
+=======
+  m_RootOrder: 8
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &455047184
 Mesh:
@@ -41396,6 +41408,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 954894726}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+  m_GameObject: {fileID: 822395095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.204256, y: 1.4173192, z: -3.35214}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1001 &824223026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46077,6 +46101,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 949757917}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &954894726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46196,6 +46221,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819f20b5dd37c34893a1d7ef8bdd7b8, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &957590870
 GameObject:
   m_ObjectHideFlags: 0
@@ -47583,7 +47610,11 @@ PrefabInstance:
     - target: {fileID: 8495559347209190236, guid: 05a377fc875c4824ba02ad9f69faf64c,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 2
+=======
+      value: 1
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8495559347209190236, guid: 05a377fc875c4824ba02ad9f69faf64c,
         type: 3}
@@ -61893,6 +61924,61 @@ Transform:
   m_Father: {fileID: 1996301966}
   m_RootOrder: 111
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &1264609321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264609323}
+  - component: {fileID: 1264609322}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1264609322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264609321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6ca971b500c044c85d22ec201ec9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundslist:
+  - name: JEMUDR
+    clip: {fileID: 8300000, guid: 3f94d7906b3801c4394415a2be4657c0, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    spacialBlend: 0
+    loop: 1
+--- !u!4 &1264609323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264609321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.204256, y: 1.4173192, z: -3.35214}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!43 &1267477289
 Mesh:
   m_ObjectHideFlags: 0
@@ -70068,6 +70154,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1384397561}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1384895156
 GameObject:
   m_ObjectHideFlags: 0
@@ -70204,6 +70291,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384895156}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1391006339
 GameObject:
   m_ObjectHideFlags: 0
@@ -77778,7 +77867,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 4
+=======
+  m_RootOrder: 3
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1584858766
 MonoBehaviour:
@@ -82089,7 +82182,11 @@ RectTransform:
   m_Children:
   - {fileID: 1380410748}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 6
+=======
+  m_RootOrder: 5
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -94372,7 +94469,11 @@ PrefabInstance:
     - target: {fileID: 5357355814952862923, guid: 648eddaf82f16fa4fa4fdec03ce3b1d0,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 3
+=======
+      value: 2
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5357355814952862923, guid: 648eddaf82f16fa4fa4fdec03ce3b1d0,
         type: 3}
@@ -102660,7 +102761,11 @@ Transform:
   - {fileID: 1188181976}
   - {fileID: 922356581242975244}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 5
+=======
+  m_RootOrder: 4
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2006670231
 Mesh:
@@ -109312,6 +109417,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 922356581242975243}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1550632121300194417
 GameObject:
   m_ObjectHideFlags: 0
@@ -109570,11 +109676,14 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!1001 &5922702406405390175
+=======
+--- !u!1001 &7525016254558830644
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1996301966}
     m_Modifications:
     - target: {fileID: 5922702405839761337, guid: 2b8ec0aa7720b80488b2310a22351972,
         type: 3}
