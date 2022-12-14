@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9aa68e5f11f55864fba64f9e95c979b1, type: 3}
-  m_Name: Getuigen
+  m_Name: piekeren
   m_EditorClassIdentifier: 
-  word: Getuige
-  description: iemand die iets heeft gezien of meegemaakt
+  word: Piekeren
+  description: 'heel veel en lang nadenken, vaak negatief '
