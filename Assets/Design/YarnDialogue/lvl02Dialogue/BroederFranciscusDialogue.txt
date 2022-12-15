@@ -1,6 +1,34 @@
+Broeder Franciscus: Goedemorgen, prijs de Heer.
 
-Broeder Franciscus: Zelfs protestanten verdienen het niet om zo wreed behandeld te worden.
+@ Er is een ketter ontsnapt, heb jij iets gezien?
+	% jump GetuigeVraag
+@ Heb jij de ketter helpen ontsnappen?
+	% jump BeschuldigVraag
+
+% start GetuigeVraag
+
+Broeder Franciscus: Och die arme man, moge het hem goed gaan verder.
+Broeder Franciscus: Zelf was ik bezig de Mis voor te bereeiden, ik was de hele tijd in de kerk.\
+Broeder Franciscus: Ik heb dus niks gezien.
+Broeder Franciscus: Maar ik geloof dat zelfs protestanten verdienen het niet om zo wreed behandeld te worden.
 Broeder Franciscus: We zijn allemaal tenslotte mensen.
-Broeder Franciscus: Ik geloof dat iedereen met een goed hart de arme man zou helpen, hij deed geen vlieg kwaad en had enkel een Lutherse bijbel in huis.
+Broeder Franciscus: Iedereen met een goed hart zou de arme man helpen, hij deed geen vlieg kwaad.
+Broeder Franciscus: Hij had enkel een Lutherse bijbel in huis.
 
--> Oke, bedankt.
+@ Oke, bedankt.
+
+% end GetuigeVraag
+
+% start BeschuldigVraag
+
+Broeder Franciscus: Ketter...
+Broeder Franciscus: Wat een naar woord is het ook.
+Broeder Franciscus: Nee, ik heb de arme man niet geholpen.
+Broeder Franciscus: Maar ik geloof dat zelfs protestanten verdienen het niet om zo wreed behandeld te worden.
+Broeder Franciscus: We zijn allemaal tenslotte mensen.
+Broeder Franciscus: Iedereen met een goed hart zou de arme man helpen, hij deed geen vlieg kwaad.
+Broeder Franciscus: Hij had enkel een Lutherse bijbel in huis.
+
+@ Oke, bedankt.
+
+% end BeschuldigVraag

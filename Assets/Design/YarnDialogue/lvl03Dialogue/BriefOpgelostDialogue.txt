@@ -1,11 +1,9 @@
 Anna: Heeft u de codetaal al weten te ontcijferen?
--> Ja
-<<jump Ontcijferd>>
+@ Ja
+% jump Ontcijferd 
+@ Nee, nog niet.
 
--> Nee, nog niet.
-
----
-title: Ontcijferd
+% start Ontcijferd
 Anna: Oh, wat snel!
 Anna: Alle geruchten zijn waar, u bent een expert!
 Anna: Wat? 
@@ -17,3 +15,5 @@ Anna: Ondanks dat het nieuws niet van fijne aard is, brengt het mij toch tot rus
 Anna: Nu hoef ik niet meer te piekeren over wat er misschien zou zijn gebeurd.
 Anna: Daarvoor dank ik u vanuit het diepste van mijn hart.
 Anna: Hier is een bedankje, mocht het u goed gaan verder!
+
+% end Ontcijferd

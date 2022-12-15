@@ -5,6 +5,9 @@ Anna: Ze hadden gelijk over hoe goed en snel je bent!
 Anna: Och, waar zijn mijn manieren?
 Anna: Dit is Willem van Oranje, een goede vriend van mijn zoon.
 Willem: Goededag, ik kwam langs om mijn rouw te uiten aan mevrouw van Egmond.
+
+@ Gecondoleerd en sterkte.
+
 Anna: Hmm, dat is vreemd, een deel van de brief staat in cijfers geschreven...
 Willem: Cijfers? Mag ik even kijken?
 Willem: Hmm.. aha!
@@ -22,4 +25,4 @@ Willem: Hij heeft zelf de notities gepakt in zijn bek.
 Willem: Hij is een beetje nat van speeksel, ugh.. 
 Willem: Hopelijk heeft u er alsnog wat aan...
 
--> Bedankt!
+@ Uhh.. Bedankt.

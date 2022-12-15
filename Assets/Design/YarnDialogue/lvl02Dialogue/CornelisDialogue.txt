@@ -1,6 +1,11 @@
 Cornelis: Heeft u de dader al weten op te sporen?
 
--> Nee, heeft u hem zelf misschien hebt laten ontsnappen?
+@ Nee, heeft u hem zelf misschien hebt laten ontsnappen?
+	% jump BeschuldigVraag
+@ Ja, ik weet wie de dader was.
+	% jump Antwoord
+
+% start BeschuldigVraag
 
 Cornelis: Ik haal jou hier om mij te helpen en je denkt dat ik hem zelf heb bevrijd?
 Cornelis: Misschien ben je een slechtere detective dan ik dacht.
@@ -8,4 +13,18 @@ Cornelis: Ik heb ten slotte zelf het bevel gegeven om hem op te laten pakken en 
 Cornelis: Filips zorgt er met zijn harde aanpak wel voor dat iedereen hier boos wordt, zelf ik wordt nu verdacht!
 Cornelis: Ik kan hem ook gewoon laten weten dat ik die ketter heb laten verbranden...
 
--> Oke, bedankt.
+@ Oke, bedankt.
+
+% end BeschuldigVraag
+
+% start Antwoord
+//hier een bool gebruiken voor wincondition ipv verwijzen naar notebook?
+Cornelis: Fantastisch!
+Cornelis: Maar weet je zeker dat je alle feiten goed hebt?
+Cornelis: Ik zag dat je een notitieboekje mee hebt.
+Cornelis: Daar kan je vast goed alle feiten op een rijte zetten.
+Cornelis: Wees snel, ik wil niet dat de koning mij hiervoor laat branden...
+
+@ Oke, bedankt.
+
+% end Antwoord
