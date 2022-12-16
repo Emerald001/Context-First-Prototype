@@ -69,8 +69,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dit is de vraag?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2ec84e2d3ca8cd4984f70fdbd4a6180, type: 2}
+  m_sharedMaterial: {fileID: 7534580230092827241, guid: e2ec84e2d3ca8cd4984f70fdbd4a6180,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -272,11 +273,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254279d29cbe24f42b73f8c706d374fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClueScriptableObject: {fileID: 11400000, guid: 4961bf4f373e07c45b0128cfa8d06144,
+  ClueScriptableObject: {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c,
     type: 2}
   ClueVraag: {fileID: 1224222390337706654}
   Antwoord: {fileID: 1224222390855183744}
-  Clue: {fileID: 1224222391581124374}
+  taart: {fileID: 1224222391581124371}
 --- !u!1 &1224222390855183746
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,8 +348,9 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2ec84e2d3ca8cd4984f70fdbd4a6180, type: 2}
+  m_sharedMaterial: {fileID: 7534580230092827241, guid: e2ec84e2d3ca8cd4984f70fdbd4a6180,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -505,6 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce00c46d2fd2c3d42ae041c10ee46c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clue: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   backupParent: {fileID: 0}
   CanvasTransform: {fileID: 0}

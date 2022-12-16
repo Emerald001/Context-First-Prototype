@@ -68,6 +68,13 @@ public class MovementManager : MonoBehaviour
 
     [HideInInspector] public bool Interacting;
 
+    private void OnEnable() {
+        EventManager<bool>.Subscribe(EventType.SET_INTERACTION_STATE, SetInteracting);
+    }
+    private void OnDisable() {
+        EventManager<bool>.Unsubscribe(EventType.SET_INTERACTION_STATE, SetInteracting);
+    }
+
     void Start() {
         controller = GetComponent<CharacterController>();
 
@@ -245,8 +252,7 @@ public class MovementManager : MonoBehaviour
 
     public void ResetTimer(float time) => StartCoroutine(Timer(time));
 
-    public void SetInteracting(bool setting)
-    {
+    public void SetInteracting(bool setting) {
         Interacting = setting;
     }
 
