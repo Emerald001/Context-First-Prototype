@@ -1,3 +1,6 @@
+$ DIALOG_SET_PORTRAIT AnnaVanEgmond
+$ DIALOG_SET_PORTRAIT WillemVanOranje
+
 Anna: Oh, u heeft de volledige brief gevonden! Wat fijn!
 Willem: Brief?
 Anna: Klopt, dit is de intelligente opspoorder waar ik het net over had.

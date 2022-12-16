@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT MariaGroenveld
+
 Maria: Goededag, prachtig weer vandaag vindt u niet?
 
 @ Heb jij er misschien wat mee te maken?

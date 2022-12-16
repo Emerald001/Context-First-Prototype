@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT AnnaVanEgmond
+
 Anna: Goedemorgen! Wat ontzettend fijn dat u er bent.
 Anna: Ik heb namelijk niet voor niets nare onderbuikgevoelens. 
 

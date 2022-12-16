@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT Katharina
+
 Katharina: Wat fijn dat u zo snel kon komen.
 Katharina: Mijn arme broer is hier bruut vermoord!
 Katharina: Help ons om erachter te komen wat er precies is gebeurd!

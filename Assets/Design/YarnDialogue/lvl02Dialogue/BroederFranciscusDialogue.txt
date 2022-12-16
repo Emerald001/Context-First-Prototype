@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT BroederFranciscus
+
 Broeder Franciscus: Goedemorgen, prijs de Heer.
 
 @ Er is een ketter ontsnapt, heb jij iets gezien?

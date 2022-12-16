@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT AnnaVanEgmond
+
 Anna: Heeft u de codetaal al weten te ontcijferen?
 @ Ja
 % jump Ontcijferd 

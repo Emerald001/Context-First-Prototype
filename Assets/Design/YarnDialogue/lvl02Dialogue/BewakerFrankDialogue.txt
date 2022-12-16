@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT FrankDeBewaker
+
 Frank de Bewaker: Ik kwam er bij mijn standaard ronde achter dat hij ontsnapt was en heb het meteen gerapporteerd aan de heer Cornelis!
 
 @ Heb je niet iemand gezien tijdens het bewaken?

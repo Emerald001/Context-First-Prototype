@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT CornelisGroenveld
+
 Cornelis: Goededag, fijn dat u zo snel kon komen.
 Cornelis: Ik zit echt met mijn handen in mijn haar hier
 Cornelis: Er is dus gister een ketter ontsnapt.

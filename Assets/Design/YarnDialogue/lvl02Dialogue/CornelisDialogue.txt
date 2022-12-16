@@ -1,3 +1,5 @@
+$ DIALOG_SET_PORTRAIT CornelisGroenveld
+
 Cornelis: Heeft u de dader al weten op te sporen?
 
 @ Nee, heeft u hem zelf misschien hebt laten ontsnappen?
