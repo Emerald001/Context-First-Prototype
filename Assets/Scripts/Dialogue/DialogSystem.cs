@@ -220,7 +220,7 @@ public class DialogSystem : MonoBehaviour {
     private IEnumerator DisplayText(string text) {
         List<char> charList = new();
 
-        var frontAndBack = text.Split(" ", 2);
+        var frontAndBack = text.Split(": ", 2);
         var name = frontAndBack[0];
         nameText.text = name;
         var sentence = frontAndBack[1];
