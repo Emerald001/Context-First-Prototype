@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: af863118616bda844b9456ee8c2cad29
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: nl-NL
+  stringIDs:
+  - MariaDialogue-MariaDialogue-0
+  - MariaDialogue-MariaDialogue-1
+  - MariaDialogue-MariaDialogue-2
+  - MariaDialogue-MariaDialogue-3
+  - MariaDialogue-MariaDialogue-4
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: af863118616bda844b9456ee8c2cad29,
+    type: 3}
+  localizations: []

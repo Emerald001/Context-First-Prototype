@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 1231fa0c117c0dd478e3191174728d82
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: nl-NL
+  stringIDs:
+  - BakkerBartDialogue-BakkerBartDialogue-0
+  - BakkerBartDialogue-BakkerBartDialogue-1
+  - BakkerBartDialogue-BakkerBartDialogue-2
+  - BakkerBartDialogue-BakkerBartDialogue-3
+  - BakkerBartDialogue-BakkerBartDialogue-4
+  - BakkerBartDialogue-BakkerBartDialogue-5
+  - BakkerBartDialogue-BakkerBartDialogue-6
+  - BakkerBartDialogue-BakkerBartDialogue-7
+  - BakkerBartDialogue-BakkerBartDialogue-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 1231fa0c117c0dd478e3191174728d82,
+    type: 3}
+  localizations: []
