@@ -1,5 +1,4 @@
 $ DIALOG_SET_PORTRAIT Cornelis
-$ SET_INTERACTION_STATE true
 
 	Unknown: You are <i>Gay</i>
 	Unknown: I am <i>Gay</i>
@@ -63,4 +62,3 @@ $ SET_INTERACTION_STATE true
 % end SectionThree
 
 % start Breakout
-$ SET_INTERACTION_STATE false
