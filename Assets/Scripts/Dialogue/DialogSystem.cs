@@ -71,6 +71,7 @@ public class DialogSystem : MonoBehaviour {
             index = 0;
             currentDialog = Files[DialogName];
             DialogueSystemObject.SetActive(true);
+            EventManager<bool>.Invoke(EventType.SET_INTERACTION_STATE, true);
             NextLine();
         }
         else
@@ -86,6 +87,7 @@ public class DialogSystem : MonoBehaviour {
             mainText.text = "";
             nameText.text = "";
             DialogueSystemObject.SetActive(false);
+            EventManager<bool>.Invoke(EventType.SET_INTERACTION_STATE, false);
             index = 0;
             return;
         }
