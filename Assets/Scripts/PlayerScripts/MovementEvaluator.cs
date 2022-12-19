@@ -43,8 +43,6 @@ public class MovementEvaluator
         if (tmp.Count < 1)
             return null;
 
-        Debug.Log(tmp[0].name);
-
         return tmp[0].gameObject;
     }
 
