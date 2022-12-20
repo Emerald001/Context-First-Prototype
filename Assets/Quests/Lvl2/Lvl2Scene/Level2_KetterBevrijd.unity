@@ -42518,12 +42518,12 @@ PrefabInstance:
     - target: {fileID: 5393210883327635701, guid: 0819f20b5dd37c34893a1d7ef8bdd7b8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 328
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5393210883327635701, guid: 0819f20b5dd37c34893a1d7ef8bdd7b8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 178
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5393210883327635701, guid: 0819f20b5dd37c34893a1d7ef8bdd7b8,
         type: 3}
@@ -73329,7 +73329,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 2550, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
