@@ -4,6 +4,13 @@ Hoi Tatum of Levi!
 
 Dit is je Cheatsheet!
 
+	Paar ground-rules!
+		Geen lege regel aan het begin!
+		Je kan best wel los zijn met tabs en enters, probeer het wel bij 1 tab en 2 enters te houden, anders gaat ie alsnog huilen.
+
+	Verder, Lekker proberen!
+
+
 	Het is zo simpel als:
 		"$" voor Event Commands
 		"@" voor Options
@@ -26,7 +33,7 @@ Dit is je Cheatsheet!
 
 		Voor Events heb je een EventManager, die is geimporteerd. Hieraan zitten EventTypes gekoppeld. 
 		Deze vind je bovenaan het script van de Eventmanager. Je moet één van deze precies overtypen.
-		Daarbij kan je elke value erachter zetten. 
+		Daarbij kan je elke value erachter zetten. Je hoeft hier geen "EventType" voor te zetten, alleen de naam.
 		
 		Bijv een float "$ SET_TYPE_TIME 0,01". 
 			Floats moeten met een comma en met een 0 ervoor als het een onder de 1 is.
@@ -46,7 +53,13 @@ Dit is je Cheatsheet!
 
 		Bij alle moet je goed de naam erbij zetten en denk aan CAPS want dat is wel belangrijk.
 		Als je dus "% jump SectionOne" in je line hebt staan, gaat de dialog naar het eerste "% start SectionOne" die hij tegenkomt.
-		Daarom is het ook belangrijk om niet meerdere sections met dezelfde naam te hebben in een file.  
+		Daarom is het ook belangrijk om niet meerdere sections met dezelfde naam te hebben in een file.
+
+		Ik raad aan een section start helemaal onderin te zetten, die je "Breakout" noemt.
+		Dan kan je makkelijk een optie helemaal naar beneden laten gaan, waar hij dan uit de dialog gaat.
+			Dat ziet er dan zo uit "% jump Breakout"
+			en dan heb je HELEMAAL ONDERAAN "% start Breakout"
+			Hier hoef je geen end bij te doen.
 
 
 		Opties zijn ook heel simpel, maar hebben wel een extra dingetje.
@@ -80,7 +93,6 @@ Dit is je Cheatsheet!
 				Hier kan je dus vanalles doen, als je een geluidje wilt afspelen kan dat op dezelfde manier, maar dan met andere paramaters en een andere EventType ofc.
 
 	
-Je kan ook best wel los zijn met tabs en enters, probeer het wel bij 1 tab en 2 enters te houden, anders gaat ie alsnog huilen.
 Je kan een voorbeeld vinden in de folder "Resources\DialogFiles\Test 1.txt"
 
 Als je er nog vragen over hebt, stuur gerust een berichtje!

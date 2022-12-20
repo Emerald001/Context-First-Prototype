@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbc9f85bec2cee4784fcc065f55d129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueName: 
+  DialogueName: BakkerBartDialogue
 --- !u!1 &127933637
 GameObject:
   m_ObjectHideFlags: 0
@@ -36723,7 +36723,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 521554016774783553, guid: 93984d477c6364949ad3fc42884f2510, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 93984d477c6364949ad3fc42884f2510, type: 3}
 --- !u!20 &886443320 stripped
 Camera:

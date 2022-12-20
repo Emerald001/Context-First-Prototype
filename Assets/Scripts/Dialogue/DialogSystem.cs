@@ -71,6 +71,7 @@ public class DialogSystem : MonoBehaviour {
             index = 0;
             currentDialog = Files[DialogName];
             DialogueSystemObject.SetActive(true);
+            EventManager<bool>.Invoke(EventType.SET_INTERACTION_STATE, true);
             NextLine();
         }
         else
@@ -86,6 +87,7 @@ public class DialogSystem : MonoBehaviour {
             mainText.text = "";
             nameText.text = "";
             DialogueSystemObject.SetActive(false);
+            EventManager<bool>.Invoke(EventType.SET_INTERACTION_STATE, false);
             index = 0;
             return;
         }
@@ -218,7 +220,7 @@ public class DialogSystem : MonoBehaviour {
     private IEnumerator DisplayText(string text) {
         List<char> charList = new();
 
-        var frontAndBack = text.Split(" ", 2);
+        var frontAndBack = text.Split(": ", 2);
         var name = frontAndBack[0];
         nameText.text = name;
         var sentence = frontAndBack[1];
