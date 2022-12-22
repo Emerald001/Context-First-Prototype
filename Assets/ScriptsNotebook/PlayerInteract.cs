@@ -64,7 +64,7 @@ public class PlayerInteract : MonoBehaviour
 
             if (hit.collider.gameObject.GetComponent<TakeClue>() != null)
             {
-                clueHelper.AddObjectToList(hit.collider.gameObject.GetComponent<TakeClue>());
+                //clueHelper.AddObjectToList(hit.collider.gameObject.GetComponent<TakeClue>());
                 //Destroy(hit.collider.gameObject.GetComponent<TakeClue>());
             }
         }

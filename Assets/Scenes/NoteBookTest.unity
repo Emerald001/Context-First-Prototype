@@ -1294,7 +1294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractText: {fileID: 279180801}
-  clueHelper: {fileID: 1247056905}
+  clueHelper: {fileID: 0}
   sphereRadius: 2
   InteractReach: 4
 --- !u!114 &878294356
@@ -2130,17 +2130,15 @@ MonoBehaviour:
   NoteBookClueParent: {fileID: 1560990004}
   NoteBookCodexParent: {fileID: 606525354}
   ToggleParent: {fileID: 1865180610}
-  codexPages: 0
   collectiblesPages: 0
+  codexPages: 0
   maxPages: 0
   ClueTreshhold: 0
   codexPageNumber: 0
   collectiblePageNumber: 0
   clueActive: 0
   BookActive: 0
-  NoteBookCollectiblesList:
-    CollectiblesList: []
-  NoteBookClueList: []
+  CollectiblesFound: 0
   NoteBookCodexList:
     CodexList:
     - PageList:
@@ -2159,11 +2157,13 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
       - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
       - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
+  NoteBookCollectiblesList:
+    CollectiblesList: []
+  NoteBookClueList: []
   CurrentPageList: []
   prefabList: []
   ClueListPrefab: []
   currentPage: 0
-  CollectiblesFound: 0
 --- !u!114 &1247056904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2186,10 +2186,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247056901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db61d45b3701444c983c107e58d1c68, type: 3}
+  m_Script: {fileID: 11500000, guid: a6d40102096e44d419bbad2d7f45553c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClueFoundList: []
+  numberOfMissions: 3
+  cluePrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
+    type: 3}
+  clueSpawnLocation: {fileID: 1560990003}
+  firstMission:
+  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
+  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
+  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
+  secondMission:
+  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
+  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
+  thirdMission:
+  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
+  CluePage: 0
 --- !u!1 &1352552166
 GameObject:
   m_ObjectHideFlags: 0

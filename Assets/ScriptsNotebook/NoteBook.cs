@@ -12,18 +12,19 @@ public class NoteBook : MonoBehaviour
     public Transform NoteBookCodexParent;
     public Transform ToggleParent;
 
-    [HideInInspector] public int codexPages;
     public int collectiblesPages;
+    [HideInInspector] public int codexPages;
     [HideInInspector] public int maxPages;
     [HideInInspector] public int ClueTreshhold;
     [HideInInspector] public int codexPageNumber;
     [HideInInspector] public int collectiblePageNumber;
     [HideInInspector] public bool clueActive = false;
     [HideInInspector] public bool BookActive;
+    [HideInInspector] public int CollectiblesFound;
 
+    public CodexPageList NoteBookCodexList = new CodexPageList();
     [HideInInspector] public CollectiblePagesList NoteBookCollectiblesList = new CollectiblePagesList();
     [HideInInspector] public List<TakeClue> NoteBookClueList = new List<TakeClue>();
-    public CodexPageList NoteBookCodexList = new CodexPageList();
 
     [HideInInspector] public List<Page> CurrentPageList = new List<Page>();
     [HideInInspector] public List<GameObject> prefabList = new List<GameObject>();
@@ -31,15 +32,13 @@ public class NoteBook : MonoBehaviour
 
     public int currentPage;
     private GameObject TempPrefab;
-    [HideInInspector] public int CollectiblesFound;
     private int index2;
     private bool CluesMade = false;
-    private ClueHelperScript clueHelper;
     private bool max;
+    private GoToClues goToClues;
     // Start is called before the first frame update
     void Start()
     {
-        clueHelper = GetComponent<ClueHelperScript>();
         NoteBookClueParent.gameObject.SetActive(false);
         NoteBookCodexParent.gameObject.SetActive(false);
         ToggleParent.gameObject.SetActive(false);
@@ -48,6 +47,7 @@ public class NoteBook : MonoBehaviour
         prefabList = new List<GameObject>();
         NoteBookCollectiblesList.CollectiblesList.Add(new Page());
         NoteBookCollectiblesList.CollectiblesList[0].PageList = new List<ScriptableObject>();
+        goToClues = GetComponent<GoToClues>();
 
         TakeClue[] FindClues = FindObjectsOfType<TakeClue>();
         foreach (TakeClue clue in FindClues){
@@ -131,15 +131,17 @@ public class NoteBook : MonoBehaviour
         NoteBookCollectibleParent.gameObject.SetActive(false);
         NoteBookClueParent.gameObject.SetActive(true);
         NoteBookCodexParent.gameObject.SetActive(false);
+        goToClues.ShowClues();
+
         
-        if (ClueListPrefab.Count != NoteBookClueList.Count){
-            foreach (TakeClue clue in NoteBookClueList){
-                Clue ClueToAdd = (Clue)clue.scriptableObject;
-                CluePrefab.GetComponent<InventorySlot>().ClueScriptableObject = ClueToAdd;
-                TempPrefab = Instantiate(CluePrefab, NoteBookClueParent);
-                ClueListPrefab.Add(TempPrefab);
-            }
-        }
+        //if (ClueListPrefab.Count != NoteBookClueList.Count){
+        //    foreach (TakeClue clue in NoteBookClueList){
+        //        Clue ClueToAdd = (Clue)clue.scriptableObject;
+        //        CluePrefab.GetComponent<InventorySlot>().ClueScriptableObject = ClueToAdd;
+        //        TempPrefab = Instantiate(CluePrefab, NoteBookClueParent);
+        //        ClueListPrefab.Add(TempPrefab);
+        //    }
+        //}
     }
 
     public void GoToCodex()
@@ -193,7 +195,13 @@ public class NoteBook : MonoBehaviour
     //Page buttons
     public void PageRight()
     {
-        if(currentPage == 0){
+        if(currentPage < 0)
+        {
+            ResetPage();
+            currentPage++;
+            GoToCluePage();
+        }
+        else if(currentPage == 0){
             ResetPage();
             codexPageNumber = 0;
             collectiblePageNumber++;
@@ -229,6 +237,12 @@ public class NoteBook : MonoBehaviour
 
     public void PageLeft()
     {
+        if(currentPage <= 0)
+        {
+            ResetPage();
+            currentPage--;
+            GoToCluePage();
+        }
         if(currentPage > 0){
             if (codexPageNumber > 1)
             {
