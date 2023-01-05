@@ -27,7 +27,7 @@ public class NoteBook : MonoBehaviour
     [HideInInspector] public List<TakeClue> NoteBookClueList = new List<TakeClue>();
 
     [HideInInspector] public List<Page> CurrentPageList = new List<Page>();
-    [HideInInspector] public List<GameObject> prefabList = new List<GameObject>();
+    public List<GameObject> prefabList = new List<GameObject>();
     [HideInInspector] public List<GameObject> ClueListPrefab = new List<GameObject>();
 
     public int currentPage;
@@ -86,6 +86,7 @@ public class NoteBook : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.Escape) && BookActive == true){
             ToggleParent.gameObject.SetActive(false);
+            ResetPage();
             //UpdatePages();
             BookActive = false;
         }

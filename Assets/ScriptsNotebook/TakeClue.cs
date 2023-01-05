@@ -5,10 +5,10 @@ using UnityEngine;
 public class TakeClue : MonoBehaviour, IInteractable
 {
     public ScriptableObject scriptableObject;
-    public NoteBook noteBook;
+    public GoToClues cluesScript;
     public GameObject DragableCluePrefab;
-    public Transform notebookToggle;
-    GameObject test;
+    public Transform DragDropPage;
+    GameObject tmp;
     public bool ClueFound = false;
 
     public void Interact()
@@ -16,9 +16,10 @@ public class TakeClue : MonoBehaviour, IInteractable
         //noteBook.ToggleClueFound(scriptableObject);
         if(ClueFound == false)
         {
-            test = Instantiate(DragableCluePrefab, notebookToggle);
-            test.GetComponent<ClueAnswer>().ClueScriptableObject = (Clue)scriptableObject;
-            test.GetComponent<DragableItem>().clue = (Clue)scriptableObject;
+            //tmp = Instantiate(DragableCluePrefab, DragDropPage);
+            //DragableCluePrefab.GetComponent<ClueAnswer>().ClueScriptableObject = (Clue)scriptableObject;
+            //DragableCluePrefab.GetComponent<DragableItem>().clue = (Clue)scriptableObject;
+            cluesScript.firstMissionAnswers.Add(scriptableObject);
             ClueFound = true;
         }
             

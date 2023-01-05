@@ -398,10 +398,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  noteBook: {fileID: 1247056903}
+  cluesScript: {fileID: 1247056905}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  notebookToggle: {fileID: 1560990004}
+  DragDropPage: {fileID: 1560990004}
   ClueFound: 0
 --- !u!135 &236014990
 SphereCollider:
@@ -617,6 +617,109 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279180801}
+  m_CullTransparentMesh: 1
+--- !u!1 &307993166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 307993167}
+  - component: {fileID: 307993170}
+  - component: {fileID: 307993169}
+  - component: {fileID: 307993168}
+  m_Layer: 5
+  m_Name: Pages2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &307993167
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307993166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.69145995, y: 0.84981996, z: 0.63583}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 639548844}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.991089, y: 0}
+  m_SizeDelta: {x: 1839.0249, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &307993168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307993166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 535
+    m_Right: 0
+    m_Top: 110
+    m_Bottom: 37
+  m_ChildAlignment: 0
+  m_Spacing: 6.45
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &307993169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307993166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1c4d2b56231373649b9a7fef468f4b05, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &307993170
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307993166}
   m_CullTransparentMesh: 1
 --- !u!1 &367091369
 GameObject:
@@ -886,6 +989,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1560990004}
+  - {fileID: 307993167}
+  - {fileID: 1703912008}
   m_Father: {fileID: 1865180610}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1140,10 +1245,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  noteBook: {fileID: 1247056903}
+  cluesScript: {fileID: 1247056905}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  notebookToggle: {fileID: 1560990004}
+  DragDropPage: {fileID: 1560990004}
   ClueFound: 0
 --- !u!1 &840234810
 GameObject:
@@ -1178,10 +1283,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  noteBook: {fileID: 1247056903}
+  cluesScript: {fileID: 1247056905}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  notebookToggle: {fileID: 1560990004}
+  DragDropPage: {fileID: 1560990004}
   ClueFound: 0
 --- !u!135 &840234812
 SphereCollider:
@@ -1888,10 +1993,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  noteBook: {fileID: 1247056903}
+  cluesScript: {fileID: 1247056905}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  notebookToggle: {fileID: 1560990004}
+  DragDropPage: {fileID: 1560990004}
   ClueFound: 0
 --- !u!135 &1058980355
 SphereCollider:
@@ -2190,7 +2295,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfMissions: 3
-  cluePrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
+  clueQuestionPrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
+    type: 3}
+  clueAnserPrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
   clueSpawnLocation: {fileID: 1560990003}
   firstMission:
@@ -2202,6 +2309,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
   thirdMission:
   - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
+  firstMissionAnswers: []
+  secondMissionAnswers: []
+  thirdMissionAnswers: []
+  objects: []
   CluePage: 0
 --- !u!1 &1352552166
 GameObject:
@@ -2831,7 +2942,7 @@ GameObject:
   - component: {fileID: 1560990006}
   - component: {fileID: 1560990008}
   m_Layer: 5
-  m_Name: Pages
+  m_Name: Pages1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3033,6 +3144,109 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1703912007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703912008}
+  - component: {fileID: 1703912011}
+  - component: {fileID: 1703912010}
+  - component: {fileID: 1703912009}
+  m_Layer: 5
+  m_Name: Pages3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1703912008
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703912007}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.69145995, y: 0.84981996, z: 0.63583}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 639548844}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.991089, y: 0}
+  m_SizeDelta: {x: 1839.0249, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1703912009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703912007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 535
+    m_Right: 0
+    m_Top: 110
+    m_Bottom: 37
+  m_ChildAlignment: 0
+  m_Spacing: 6.45
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &1703912010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703912007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1c4d2b56231373649b9a7fef468f4b05, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1703912011
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703912007}
+  m_CullTransparentMesh: 1
 --- !u!1 &1751251655
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,10 +3772,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  noteBook: {fileID: 1247056903}
+  cluesScript: {fileID: 1247056905}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  notebookToggle: {fileID: 1560990004}
+  DragDropPage: {fileID: 1560990004}
   ClueFound: 0
 --- !u!135 &2039247864
 SphereCollider:

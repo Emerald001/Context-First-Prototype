@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce00c46d2fd2c3d42ae041c10ee46c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clue: {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
   parentAfterDrag: {fileID: 0}
   backupParent: {fileID: 0}
   CanvasTransform: {fileID: 0}
@@ -129,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718f01b2dbc7b2548ac785c9cdbc0a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClueScriptableObject: {fileID: 0}
+  ClueScriptableObject: {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380,
+    type: 2}
   Antwoord: {fileID: 5897612246054391915}
 --- !u!1 &5897612246054391913
 GameObject:
