@@ -9,6 +9,8 @@ public class NoteBookV2 : MonoBehaviour
     public CollectibleManager collectibleManager;
     public CodexManager codexManager;
 
+    public int CollectibleListEntries = 0;
+    public int CollectibleChildNumber = 0;
 
     [HideInInspector] public bool BookActive = false;
     public bool collectibleActive;

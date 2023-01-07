@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: 5f03619b97e14fd44938ae5e32f94850, type: 2}
-  noteBook: {fileID: 1247056903}
+  noteBook: {fileID: 2102466637}
 --- !u!135 &18913661
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4542,7 +4542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: 233431398ea883144a95e28ccc2064b5, type: 2}
-  noteBook: {fileID: 1247056903}
+  noteBook: {fileID: 2102466637}
 --- !u!135 &1562559703
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4779,13 +4779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf7854d714f9e5468d1af9a47a95c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectibleList:
-  - {fileID: 11400000, guid: c51657edd46f5234eb45c75922e84f89, type: 2}
-  - {fileID: 11400000, guid: c51657edd46f5234eb45c75922e84f89, type: 2}
-  - {fileID: 11400000, guid: c51657edd46f5234eb45c75922e84f89, type: 2}
-  - {fileID: 11400000, guid: c51657edd46f5234eb45c75922e84f89, type: 2}
-  - {fileID: 11400000, guid: c51657edd46f5234eb45c75922e84f89, type: 2}
-  - {fileID: 11400000, guid: c51657edd46f5234eb45c75922e84f89, type: 2}
+  CollectibleList: []
   CollectiblePrefab: {fileID: 6127063819511471894, guid: d48584e0deca78f469299b96634b69cf,
     type: 3}
 --- !u!1 &1644801631
@@ -5035,7 +5029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObject: {fileID: 11400000, guid: c51657edd46f5234eb45c75922e84f89, type: 2}
-  noteBook: {fileID: 1247056903}
+  noteBook: {fileID: 2102466637}
 --- !u!135 &1751251657
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5377,8 +5371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf7854d714f9e5468d1af9a47a95c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectibleList:
-  - {fileID: 11400000, guid: 5f03619b97e14fd44938ae5e32f94850, type: 2}
+  CollectibleList: []
   CollectiblePrefab: {fileID: 6127063819511471894, guid: d48584e0deca78f469299b96634b69cf,
     type: 3}
 --- !u!1 &1916045568
@@ -6240,9 +6233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf7854d714f9e5468d1af9a47a95c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectibleList:
-  - {fileID: 11400000, guid: 233431398ea883144a95e28ccc2064b5, type: 2}
-  - {fileID: 11400000, guid: 233431398ea883144a95e28ccc2064b5, type: 2}
+  CollectibleList: []
   CollectiblePrefab: {fileID: 6127063819511471894, guid: d48584e0deca78f469299b96634b69cf,
     type: 3}
 --- !u!1 &2084876965
@@ -6518,6 +6509,8 @@ MonoBehaviour:
   clueManager: {fileID: 1644801633}
   collectibleManager: {fileID: 1713541696}
   codexManager: {fileID: 252979636}
+  CollectibleListEntries: 0
+  CollectibleChildNumber: 0
   BookActive: 0
   collectibleActive: 0
   codexActive: 0
