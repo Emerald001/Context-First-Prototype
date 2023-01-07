@@ -6,8 +6,9 @@ public class ClueManager : MonoBehaviour
 {
     public int currentCluePage;
     public int numberOfPages;
-    public bool CollectibleActive;
     public CollectibleManager collectibleManager;
+
+    private NoteBookV2 noteBookV2;
 
     private void OnEnable()
     {
@@ -18,7 +19,7 @@ public class ClueManager : MonoBehaviour
     {
         currentCluePage = 0;
         numberOfPages = transform.childCount;
-        CollectibleActive = false;
+        noteBookV2 = GetComponentInParent<NoteBookV2>();
     }
 
     // Update is called once per frame
@@ -45,27 +46,17 @@ public class ClueManager : MonoBehaviour
 
     public void GoToPrevCluePage()
     {
-        if (currentCluePage > 0 && CollectibleActive == false)
+        if (currentCluePage > 0 && noteBookV2.collectibleActive == false)
         {
             currentCluePage--;
             gameObject.transform.GetChild(currentCluePage).gameObject.SetActive(true);
             gameObject.transform.GetChild(currentCluePage + 1).gameObject.SetActive(false);
-        }
-        if(CollectibleActive == true)
-        {
-            collectibleManager.GoToPrevCollectiblePage();
         }
     }
 
     public void SwitchToCollectible()
     {
         collectibleManager.gameObject.SetActive(true);
-        if(CollectibleActive == true)
-        {
-
-            Debug.Log("CLUE");
-            collectibleManager.GoToNextCollectiblePage();
-        }
-        CollectibleActive = true;
+        noteBookV2.collectibleActive = true;
     }
 }

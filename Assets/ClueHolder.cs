@@ -12,7 +12,8 @@ public class ClueHolder : MonoBehaviour
     {
         foreach (Clue clue in ClueList)
         {
-            Instantiate(CluePrefab, gameObject.transform);
+            CluePrefab.GetComponent<InventorySlot>().ClueScriptableObject = clue;
+            var tmp = Instantiate(CluePrefab, gameObject.transform);
         }
     }
 }

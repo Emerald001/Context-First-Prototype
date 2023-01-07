@@ -7,8 +7,8 @@ public class CollectibleManager : MonoBehaviour
     public int currentCollectiblePage;
     public int numberOfPages;
     public ClueManager clueManager;
-    public CodexManager Codex;
-
+    public CodexManager CodexManager;
+    private NoteBookV2 noteBookV2;
     private void OnEnable()
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -19,6 +19,7 @@ public class CollectibleManager : MonoBehaviour
     {
         currentCollectiblePage = 0;
         numberOfPages = transform.childCount;
+        noteBookV2 = GetComponentInParent<NoteBookV2>();
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class CollectibleManager : MonoBehaviour
     {
         if (currentCollectiblePage != numberOfPages - 1)
         {
-            Debug.Log("OI2");
+            Debug.Log("Collectible next page");
 
             currentCollectiblePage++;
             gameObject.transform.GetChild(currentCollectiblePage).gameObject.SetActive(true);
@@ -39,7 +40,9 @@ public class CollectibleManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("OI");
+            Debug.Log("Gotta go to codex");
+            gameObject.transform.GetChild(currentCollectiblePage).gameObject.SetActive(false);
+            SwitchToCodex();
         }
     }
 
@@ -53,12 +56,18 @@ public class CollectibleManager : MonoBehaviour
         }
         else
         {
-            clueManager.CollectibleActive = false;
+            noteBookV2.collectibleActive = false;
             clueManager.gameObject.transform.GetChild(clueManager.numberOfPages -1).gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
         
     }
 
+    public void SwitchToCodex()
+    {
+        CodexManager.gameObject.SetActive(true);
+        noteBookV2.codexActive = true;
+        noteBookV2.collectibleActive = false;
+    }
 
 }

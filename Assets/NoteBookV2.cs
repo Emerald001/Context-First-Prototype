@@ -6,12 +6,21 @@ public class NoteBookV2 : MonoBehaviour
 {
     public Transform ToggleParent;
     public ClueManager clueManager;
+    public CollectibleManager collectibleManager;
+    public CodexManager codexManager;
+
+
     [HideInInspector] public bool BookActive = false;
+    public bool collectibleActive;
+    public bool codexActive;
+
 
     // Start is called before the first frame update
     void Start()
     {
         ToggleParent.gameObject.SetActive(false);
+        collectibleActive = false;
+        codexActive = false;
     }
 
     // Update is called once per frame
@@ -46,11 +55,26 @@ public class NoteBookV2 : MonoBehaviour
 
     public void PageRight()
     {
-        clueManager.GoToNextCluePage();
+        if (collectibleActive == false && codexActive == false)
+        {
+            clueManager.GoToNextCluePage();
+        }
+        else if (collectibleActive == true && codexActive == false)
+        {
+            collectibleManager.GoToNextCollectiblePage();
+        }
+        else if (collectibleActive == false && codexActive == true)
+            codexManager.GoToNextCodexPage();
+
     }
 
     public void PageLeft()
     {
-        clueManager.GoToPrevCluePage();
+        if (collectibleActive == false && codexActive == true)
+            codexManager.GoToPrevCodexPage();
+        else if (collectibleActive == true && codexActive == false)
+            collectibleManager.GoToPrevCollectiblePage();
+        else if (collectibleActive == false && codexActive == false)
+            clueManager.GoToPrevCluePage();
     }
 }
