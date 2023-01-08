@@ -397,12 +397,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15522b6b6cf7b4346ab6feae704d2412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  cluesScript: {fileID: 1247056905}
+  scriptableObject: {fileID: 11400000, guid: c5e17a1e06a8e624c93ee1b807ad9348, type: 2}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  DragDropPage: {fileID: 1560990004}
+  noteBook: {fileID: 2102466637}
   ClueFound: 0
+  QuestNumber: 0
 --- !u!135 &236014990
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &252979634
 GameObject:
@@ -891,7 +891,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2102466640}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NoteBook, Assembly-CSharp
         m_MethodName: ClueBookmark
         m_Mode: 1
@@ -1299,11 +1299,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClueList:
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
+  - {fileID: 11400000, guid: 9efe5ddaf293cc54a9eac5158118c5ae, type: 2}
+  ClueAnswerList: []
   CluePrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
+    type: 3}
+  AnswerPrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
 --- !u!1 &606525353
 GameObject:
@@ -1836,122 +1836,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820363565}
   m_CullTransparentMesh: 1
---- !u!1 &838743541
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 838743546}
-  - component: {fileID: 838743545}
-  - component: {fileID: 838743544}
-  - component: {fileID: 838743543}
-  - component: {fileID: 838743547}
-  m_Layer: 0
-  m_Name: Clue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!135 &838743543
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838743541}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &838743544
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838743541}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 734615d87a2f5d249b24e0ab9773407f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &838743545
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838743541}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &838743546
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838743541}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2033.97, y: 622.39, z: -15.41}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &838743547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838743541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15522b6b6cf7b4346ab6feae704d2412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  cluesScript: {fileID: 1247056905}
-  DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
-    type: 3}
-  DragDropPage: {fileID: 1560990004}
-  ClueFound: 0
 --- !u!1 &840234810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,12 +1868,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15522b6b6cf7b4346ab6feae704d2412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  cluesScript: {fileID: 1247056905}
+  scriptableObject: {fileID: 11400000, guid: 07c01f6de9532784c8d068e205317d1d, type: 2}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  DragDropPage: {fileID: 1560990004}
+  noteBook: {fileID: 2102466637}
   ClueFound: 0
+  QuestNumber: 0
 --- !u!135 &840234812
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2066,7 +1950,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864072642
 GameObject:
@@ -2829,12 +2713,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15522b6b6cf7b4346ab6feae704d2412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  cluesScript: {fileID: 1247056905}
+  scriptableObject: {fileID: 11400000, guid: 5799a6b808f3efa479b2c2c0336eedba, type: 2}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  DragDropPage: {fileID: 1560990004}
+  noteBook: {fileID: 2102466637}
   ClueFound: 0
+  QuestNumber: 0
 --- !u!135 &1058980355
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2906,12 +2790,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058980353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2038.59, y: 622.39, z: -15.41}
+  m_LocalPosition: {x: 2033.69, y: 622.39, z: -15.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071981715
 GameObject:
@@ -3131,7 +3015,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2102466640}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NoteBook, Assembly-CSharp
         m_MethodName: CollectiblesBookmark
         m_Mode: 1
@@ -3387,6 +3271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CorrectAnswers: []
+  correctAnswersFromLists: 0
 --- !u!114 &1247056905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,26 +3284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d40102096e44d419bbad2d7f45553c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfMissions: 3
-  clueQuestionPrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
-    type: 3}
-  clueAnserPrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
-    type: 3}
-  clueSpawnLocation: {fileID: 1560990003}
-  firstMission:
-  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  secondMission:
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  thirdMission:
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  firstMissionAnswers: []
-  secondMissionAnswers: []
-  thirdMissionAnswers: []
-  objects: []
-  CluePage: 0
 --- !u!1 &1283348443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3536,8 +3401,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClueList:
-  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
+  - {fileID: 11400000, guid: c25f44e86e8fd4d498cc10c288d25052, type: 2}
+  ClueAnswerList: []
   CluePrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
+    type: 3}
+  AnswerPrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
 --- !u!1 &1350985456
 GameObject:
@@ -3623,7 +3491,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2102466640}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NoteBook, Assembly-CSharp
         m_MethodName: CodexBookmark
         m_Mode: 1
@@ -4270,7 +4138,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1556570037
 GameObject:
@@ -5738,7 +5606,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1934102145
 GameObject:
@@ -5857,14 +5725,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClueList:
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
+  - {fileID: 11400000, guid: b83c9920ec03e034faf5ef08acf91ac6, type: 2}
+  - {fileID: 11400000, guid: 4359bc0dfc4b7ad4988bb3e4fc0dbb60, type: 2}
+  ClueAnswerList: []
   CluePrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
+    type: 3}
+  AnswerPrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
 --- !u!1 &1943148276
 GameObject:
@@ -6035,12 +5901,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15522b6b6cf7b4346ab6feae704d2412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  cluesScript: {fileID: 1247056905}
+  scriptableObject: {fileID: 11400000, guid: 8d949d159ad5dbb4db3724915d36aef4, type: 2}
   DragableCluePrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
     type: 3}
-  DragDropPage: {fileID: 1560990004}
+  noteBook: {fileID: 2102466637}
   ClueFound: 0
+  QuestNumber: 0
 --- !u!135 &2039247864
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6117,7 +5983,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064702089
 GameObject:
@@ -6482,10 +6348,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2102466641}
-  - component: {fileID: 2102466640}
-  - component: {fileID: 2102466639}
-  - component: {fileID: 2102466638}
   - component: {fileID: 2102466637}
+  - component: {fileID: 2102466642}
   m_Layer: 0
   m_Name: NoteBookV2
   m_TagString: Untagged
@@ -6514,107 +6378,6 @@ MonoBehaviour:
   BookActive: 0
   collectibleActive: 0
   codexActive: 0
---- !u!114 &2102466638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102466636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6d40102096e44d419bbad2d7f45553c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfMissions: 3
-  clueQuestionPrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
-    type: 3}
-  clueAnserPrefab: {fileID: 5897612245169724157, guid: e36677d56a1821f4aa91316fdc3cec86,
-    type: 3}
-  clueSpawnLocation: {fileID: 1283348443}
-  firstMission:
-  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  - {fileID: 11400000, guid: b6437cbc928e23b49bbf4a4eb1556380, type: 2}
-  secondMission:
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  - {fileID: 11400000, guid: 49d782980573b07478ebef17a992a39b, type: 2}
-  thirdMission:
-  - {fileID: 11400000, guid: e8e4067d7de452d4cb62f2fd5a7fbd5c, type: 2}
-  firstMissionAnswers: []
-  secondMissionAnswers: []
-  thirdMissionAnswers: []
-  objects: []
-  CluePage: 0
---- !u!114 &2102466639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102466636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d77f05e0fa7305c4ca198f65c986f4cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CorrectAnswers: []
---- !u!114 &2102466640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102466636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a51d44b28bd9e024abb8658c5b1452e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Collectibleprefab: {fileID: 6127063819511471894, guid: d48584e0deca78f469299b96634b69cf,
-    type: 3}
-  CluePrefab: {fileID: 1224222390749407768, guid: 57f9180bac80b304691ade14bf9c9d95,
-    type: 3}
-  CodexPrefab: {fileID: 5745353441881965226, guid: a09c416c48092e44594a2039a1f48a54,
-    type: 3}
-  NoteBookCollectibleParent: {fileID: 1883894200}
-  NoteBookClueParent: {fileID: 1283348444}
-  NoteBookCodexParent: {fileID: 2089475983}
-  ToggleParent: {fileID: 1576157153}
-  collectiblesPages: 0
-  codexPages: 0
-  maxPages: 0
-  ClueTreshhold: 0
-  codexPageNumber: 0
-  collectiblePageNumber: 0
-  clueActive: 0
-  BookActive: 0
-  CollectiblesFound: 0
-  NoteBookCodexList:
-    CodexList:
-    - PageList:
-      - {fileID: 11400000, guid: a9104c191ee862a4899c41a5eac72991, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-    - PageList:
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-    - PageList:
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-      - {fileID: 11400000, guid: 5d3cb18b1efc616489bceae63fd597f4, type: 2}
-  NoteBookCollectiblesList:
-    CollectiblesList: []
-  NoteBookClueList: []
-  CurrentPageList: []
-  prefabList: []
-  ClueListPrefab: []
-  currentPage: 0
 --- !u!4 &2102466641
 Transform:
   m_ObjectHideFlags: 0
@@ -6629,8 +6392,22 @@ Transform:
   m_Children:
   - {fileID: 1181110331}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2102466642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102466636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77f05e0fa7305c4ca198f65c986f4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CorrectAnswers: []
+  correctAnswersFromLists: 0
 --- !u!1 &2122125328
 GameObject:
   m_ObjectHideFlags: 0

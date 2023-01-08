@@ -132,7 +132,7 @@ public class NoteBook : MonoBehaviour
         NoteBookCollectibleParent.gameObject.SetActive(false);
         NoteBookClueParent.gameObject.SetActive(true);
         NoteBookCodexParent.gameObject.SetActive(false);
-        goToClues.ShowClues();
+        //goToClues.ShowClues();
 
         
         //if (ClueListPrefab.Count != NoteBookClueList.Count){

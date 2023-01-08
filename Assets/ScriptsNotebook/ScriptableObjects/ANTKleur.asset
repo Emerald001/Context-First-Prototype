@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c04d19c20c9c11144b2d5003d4534fc0, type: 3}
-  m_Name: PLS WERK
+  m_Script: {fileID: 11500000, guid: bd0fa375376b84a49bb8d51eb4eb41f9, type: 3}
+  m_Name: ANTKleur
   m_EditorClassIdentifier: 
-  ClueVraag: WERK JE?
-  ClueAntwoord: JAAA
+  ClueAntwoord: Blauw
+  QuestNumber: 1

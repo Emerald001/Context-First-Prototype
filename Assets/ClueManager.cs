@@ -14,11 +14,16 @@ public class ClueManager : MonoBehaviour
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
+
+    private void Awake()
+    {
+        numberOfPages = transform.childCount;
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
         currentCluePage = 0;
-        numberOfPages = transform.childCount;
         noteBookV2 = GetComponentInParent<NoteBookV2>();
     }
 

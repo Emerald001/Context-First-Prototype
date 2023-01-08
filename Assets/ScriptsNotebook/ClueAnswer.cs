@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class ClueAnswer : MonoBehaviour
 {
-    public Clue ClueScriptableObject;
+    public ClueAnswerSO ClueScriptableObject;
     public TMP_Text Antwoord;
 
     private void Start()
