@@ -33,13 +33,11 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
         {
             SetRandomPos();
         }
-
     }
 
    
     public void SetRandomPos()
     {
-        //Debug.Log("Hyva");
         x = Random.Range(100, 200);
         y = Random.Range(-150, -300);
         z = 2;
@@ -54,7 +52,6 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
         CanvasTransform = gameObject.GetComponentInParent(typeof(Canvas)) as Canvas;
         parentAfterDrag = transform.parent;
-
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -78,47 +75,38 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
     {
         //gameObject.transform.position = newPos;
         RaycastResult raycastResult = eventData.pointerCurrentRaycast;
-
+        var tmp = raycastResult;
         if (raycastResult.gameObject?.tag == destinationTag)
         {
             transform.position = raycastResult.gameObject.transform.position;
             transform.SetParent(raycastResult.gameObject.transform);
-            //if(raycastResult.gameObject.transform == parentAfterDrag)
-            //{
-            //    Debug.Log("SUCCES");
-            //    winningCondition.CorrectAnswers.Add(parentAfterDrag.gameObject);
-            //}
-            //else if(raycastResult.gameObject.transform != parentAfterDrag)
-            //{
-            //    Debug.Log("NOT GOOD");
-            //    winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject);
-            //}
-            //Debug.Log(clue.ClueAntwoord + clue.ClueVraag);
+            
             if(raycastResult.gameObject.GetComponent<InventorySlot>().Antwoord.text == clue.ClueAntwoord)
             {
                 Debug.Log("IS GOED????");
-                winningCondition.CorrectAnswers.Add(parentAfterDrag.gameObject.name);
-
+                winningCondition.CorrectAnswers.Add(clue);
+                winningCondition.CorrectGameObjects.Add(gameObject);
+                winningCondition.index++;
             }
             else if (raycastResult.gameObject.GetComponent<InventorySlot>().Antwoord.text != clue.ClueAntwoord)
             {
                 Debug.Log("IS NIET GOED!!!");
-                winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject.name);
+                winningCondition.CorrectAnswers.Remove(clue);
+                winningCondition.CorrectGameObjects.Remove(gameObject);
+                winningCondition.index--;
             }
         }
         else
         {
             transform.SetParent(raycastResult.gameObject.transform);
 
-            test();
+            winningCondition.CorrectAnswers.Remove(clue);
+            winningCondition.CorrectGameObjects.Remove(gameObject);
+            winningCondition.index--;
+
+            Debug.Log("NOT GOOD");
         }
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
-    }
-    
-    public void test()
-    {
-        winningCondition.CorrectAnswers.Remove(parentAfterDrag.gameObject.name);
-        Debug.Log("NOT GOOD");
     }
 }

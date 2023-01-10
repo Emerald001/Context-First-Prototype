@@ -7,6 +7,4 @@ public class ClueAnswerSO : ScriptableObject
 {
     public string ClueAntwoord;
     public new int QuestNumber;
-
-   
 }
